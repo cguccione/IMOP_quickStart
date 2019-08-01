@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Chapter 5 Setting up your workspace | Informatics team manual of procedures</title>
+  <meta name="description" content="This is a manual of operations for the Agios Informatics team. Its puspose is to provide a resource on best practices, aid in setting up effective and reproducible project workflows, and promote learning and sharing of ideas.">
+  <meta name="generator" content="bookdown  and GitBook 2.6.7">
+
+  <meta property="og:title" content="Chapter 5 Setting up your workspace | Informatics team manual of procedures" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is a manual of operations for the Agios Informatics team. Its puspose is to provide a resource on best practices, aid in setting up effective and reproducible project workflows, and promote learning and sharing of ideas." />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 5 Setting up your workspace | Informatics team manual of procedures" />
+  
+  <meta name="twitter:description" content="This is a manual of operations for the Agios Informatics team. Its puspose is to provide a resource on best practices, aid in setting up effective and reproducible project workflows, and promote learning and sharing of ideas." />
+  
+
+<meta name="author" content="Ania Tassinari">
+
+
+<meta name="date" content="2019-01-09">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="dos-and-donts-of-reproducible-research.html">
+<link rel="next" href="executing-workflow.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Informatics MOP</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> About</a></li>
+<li class="chapter" data-level="2" data-path="bestpractices.html"><a href="bestpractices.html"><i class="fa fa-check"></i><b>2</b> Best practices</a></li>
+<li class="chapter" data-level="3" data-path="purpose.html"><a href="purpose.html"><i class="fa fa-check"></i><b>3</b> Purpose</a></li>
+<li class="chapter" data-level="4" data-path="dos-and-donts-of-reproducible-research.html"><a href="dos-and-donts-of-reproducible-research.html"><i class="fa fa-check"></i><b>4</b> DO’s and DON’T’s of reproducible research</a></li>
+<li class="chapter" data-level="5" data-path="setting-up-your-workspace.html"><a href="setting-up-your-workspace.html"><i class="fa fa-check"></i><b>5</b> Setting up your workspace</a><ul>
+<li class="chapter" data-level="5.1" data-path="setting-up-your-workspace.html"><a href="setting-up-your-workspace.html#create-a-folder-for-your-newproject"><i class="fa fa-check"></i><b>5.1</b> Create a folder for your <em>newproject</em></a><ul>
+<li class="chapter" data-level="5.1.1" data-path="setting-up-your-workspace.html"><a href="setting-up-your-workspace.html#copy-from-a-previously-created-template-folder"><i class="fa fa-check"></i><b>5.1.1</b> Copy from a previously created template folder</a></li>
+<li class="chapter" data-level="5.1.2" data-path="setting-up-your-workspace.html"><a href="setting-up-your-workspace.html#use-a-bash-script"><i class="fa fa-check"></i><b>5.1.2</b> Use a <code>bash</code> script</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="setting-up-your-workspace.html"><a href="setting-up-your-workspace.html#set-up-a-repository-for-your-code-on-agios-secure-gitlab"><i class="fa fa-check"></i><b>5.2</b> Set up a repository for your code on Agios’ secure GitLab</a></li>
+<li class="chapter" data-level="5.3" data-path="setting-up-your-workspace.html"><a href="setting-up-your-workspace.html#set-up-a-repository-for-your-code-locally-and-link-to-gitlab"><i class="fa fa-check"></i><b>5.3</b> Set up a repository for your code locally and link to GitLab</a></li>
+<li class="chapter" data-level="5.4" data-path="setting-up-your-workspace.html"><a href="setting-up-your-workspace.html#set-up-an-r-project-in-rstudio"><i class="fa fa-check"></i><b>5.4</b> Set up an R project in RStudio</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="executing-workflow.html"><a href="executing-workflow.html"><i class="fa fa-check"></i><b>6</b> Executing workflow</a><ul>
+<li class="chapter" data-level="6.1" data-path="executing-workflow.html"><a href="executing-workflow.html#analysis-in-r-and-rstudio"><i class="fa fa-check"></i><b>6.1</b> Analysis in R and RStudio</a></li>
+<li class="chapter" data-level="6.2" data-path="executing-workflow.html"><a href="executing-workflow.html#version-control-in-git-and-gitlab"><i class="fa fa-check"></i><b>6.2</b> Version control in git and GitLab</a></li>
+<li class="chapter" data-level="6.3" data-path="executing-workflow.html"><a href="executing-workflow.html#keeping-track-of-enviroment"><i class="fa fa-check"></i><b>6.3</b> Keeping track of enviroment</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="workflows.html"><a href="workflows.html"><i class="fa fa-check"></i><b>7</b> Project workflows</a></li>
+<li class="chapter" data-level="8" data-path="toolbox.html"><a href="toolbox.html"><i class="fa fa-check"></i><b>8</b> Toolbox</a><ul>
+<li class="chapter" data-level="8.1" data-path="toolbox.html"><a href="toolbox.html#command-line-tools"><i class="fa fa-check"></i><b>8.1</b> Command Line Tools</a><ul>
+<li class="chapter" data-level="8.1.1" data-path="toolbox.html"><a href="toolbox.html#bioinformatics"><i class="fa fa-check"></i><b>8.1.1</b> Bioinformatics</a><ul>
+<li class="chapter" data-level="8.1.1.1" data-path="toolbox.html"><a href="toolbox.html#get-average-read-length-from-a-.bam-file"><i class="fa fa-check"></i><b>8.1.1.1</b> Get average read length from a <code>.bam</code> file</a></li>
+</ul></li>
+<li class="chapter" data-level="8.1.2" data-path="toolbox.html"><a href="toolbox.html#docker"><i class="fa fa-check"></i><b>8.1.2</b> Docker</a><ul>
+<li class="chapter" data-level="8.1.2.1" data-path="toolbox.html"><a href="toolbox.html#basic-commands"><i class="fa fa-check"></i><b>8.1.2.1</b> Basic commands</a></li>
+<li class="chapter" data-level="8.1.2.2" data-path="toolbox.html"><a href="toolbox.html#pruning"><i class="fa fa-check"></i><b>8.1.2.2</b> Pruning</a></li>
+</ul></li>
+<li class="chapter" data-level="8.1.3" data-path="toolbox.html"><a href="toolbox.html#file-system"><i class="fa fa-check"></i><b>8.1.3</b> File system</a><ul>
+<li class="chapter" data-level="8.1.3.1" data-path="toolbox.html"><a href="toolbox.html#list-top-5-largest-files"><i class="fa fa-check"></i><b>8.1.3.1</b> List top 5 largest files</a></li>
+<li class="chapter" data-level="8.1.3.2" data-path="toolbox.html"><a href="toolbox.html#list-files-in-a-folder-separated-by-delimeter"><i class="fa fa-check"></i><b>8.1.3.2</b> List files in a folder separated by delimeter</a></li>
+<li class="chapter" data-level="8.1.3.3" data-path="toolbox.html"><a href="toolbox.html#compare-structure-of-two-directories"><i class="fa fa-check"></i><b>8.1.3.3</b> Compare structure of two directories</a></li>
+</ul></li>
+<li class="chapter" data-level="8.1.4" data-path="toolbox.html"><a href="toolbox.html#sun-grid-engine"><i class="fa fa-check"></i><b>8.1.4</b> Sun Grid Engine</a><ul>
+<li class="chapter" data-level="8.1.4.1" data-path="toolbox.html"><a href="toolbox.html#deprioritize-jobs-in-queue"><i class="fa fa-check"></i><b>8.1.4.1</b> Deprioritize jobs in queue</a></li>
+</ul></li>
+<li class="chapter" data-level="8.1.5" data-path="toolbox.html"><a href="toolbox.html#vim"><i class="fa fa-check"></i><b>8.1.5</b> vim</a><ul>
+<li class="chapter" data-level="8.1.5.1" data-path="toolbox.html"><a href="toolbox.html#repeat-content-of-line-in-new-column"><i class="fa fa-check"></i><b>8.1.5.1</b> Repeat content of line in new column</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="toolbox.html"><a href="toolbox.html#r"><i class="fa fa-check"></i><b>8.2</b> R</a><ul>
+<li class="chapter" data-level="8.2.1" data-path="toolbox.html"><a href="toolbox.html#heatmaps"><i class="fa fa-check"></i><b>8.2.1</b> Heatmaps</a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="toolbox.html"><a href="toolbox.html#python"><i class="fa fa-check"></i><b>8.3</b> python</a></li>
+<li class="chapter" data-level="8.4" data-path="toolbox.html"><a href="toolbox.html#perl"><i class="fa fa-check"></i><b>8.4</b> perl</a><ul>
+<li class="chapter" data-level="8.4.0.1" data-path="toolbox.html"><a href="toolbox.html#get-number-of-lines-in-a-file"><i class="fa fa-check"></i><b>8.4.0.1</b> Get number of lines in a file</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Informatics team manual of procedures</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="setting-up-your-workspace" class="section level1">
+<h1><span class="header-section-number">Chapter 5</span> Setting up your workspace</h1>
+<div id="create-a-folder-for-your-newproject" class="section level2">
+<h2><span class="header-section-number">5.1</span> Create a folder for your <em>newproject</em></h2>
+<p>Come up with a project stucture you like and stick with it.</p>
+<div id="copy-from-a-previously-created-template-folder" class="section level3">
+<h3><span class="header-section-number">5.1.1</span> Copy from a previously created template folder</h3>
+<p>Use <code>cp -r project_template newproject</code>, where <code>project_template</code> has structure:</p>
+<p><img src="/data/ania/projects/presentations/img/Screen Shot 2018-05-01 at 7.51.28 PM.png"></img></p>
+</div>
+<div id="use-a-bash-script" class="section level3">
+<h3><span class="header-section-number">5.1.2</span> Use a <code>bash</code> script</h3>
+<p>Call <code>./setup_project.sh newproject</code>, where <code>setup_project.sh</code> is:</p>
+<pre><code>#!/bin/bash
+
+NEW=$1
+
+# Set up folder structure
+mkdir $NEW
+cd $NEW
+
+touch README
+
+mkdir data
+mkdir data/raw
+mkdir data/raw/pheno
+mkdir data/interim
+mkdir data/processed
+mkdir data/processed/pheno
+touch data/raw/MAKE_EVERY_FILE_READ_ONLY
+
+mkdir results
+mkdir results/reports
+mkdir results/notebooks
+mkdir results/figures
+
+mkdir sub
+mkdir sub/logs
+mkdir sub/qsub
+
+mkdir src
+touch src/functions.R
+</code></pre>
+<div class="alert alert-info">
+<p><strong>Don’t forget!</strong> <br> - Fill project README <br> - Adapt structure to project needs <br> - Exclude data and other large files from git using <code>.gitignore</code> (see next section)<br> - Make files in <code>data/raw</code> read-only with <code>chmod -w</code></p>
+</div>
+<div class="alert alert-warning">
+<p><strong>Project organization ideas:</strong> <br> <a href="http://projecttemplate.net/getting_started.html" class="uri">http://projecttemplate.net/getting_started.html</a> <br> <a href=https://peerj.com/preprints/3192.pdf>Packaging data analytical work reproducibly using R (and friends)</a><br> <a href=https://community.rstudio.com/clicks/track?url=https%3A%2F%2Fmaraaverick.rbind.io%2F2017%2F09%2Fr-workflow-fun%2F&post_id=8980&topic_id=1995>R workflow fun</a><br> <a href=https://drivendata.github.io/cookiecutter-data-science/>Cookiecutter Data Science</a><br></p>
+</div>
+</div>
+</div>
+<div id="set-up-a-repository-for-your-code-on-agios-secure-gitlab" class="section level2">
+<h2><span class="header-section-number">5.2</span> Set up a repository for your code on Agios’ secure GitLab</h2>
+<p>Create a new project at <a href>http://ceres.agios.com</a> (Mark P. can help)</p>
+</div>
+<div id="set-up-a-repository-for-your-code-locally-and-link-to-gitlab" class="section level2">
+<h2><span class="header-section-number">5.3</span> Set up a repository for your code locally and link to GitLab</h2>
+<p>In your <em>newproject</em> folder on command line execute (modify user name):</p>
+<pre><code>git init
+git add .
+git commit -am 'initial commit'
+git remote add origin git@ceres.agios.com:User.Name/newproject.git
+git push -u origin master 
+</code></pre>
+</div>
+<div id="set-up-an-r-project-in-rstudio" class="section level2">
+<h2><span class="header-section-number">5.4</span> Set up an R project in RStudio</h2>
+<p>Choose Existing Directory (<em>newproject</em>) <br> <img src="/data/ania/projects/presentations/img/Screen Shot 2018-05-01 at 8.28.45 PM.png"></img> <img src="/data/ania/projects/presentations/img/Screen Shot 2018-05-01 at 8.29.08 PM.png" width="40%"></img></p>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="dos-and-donts-of-reproducible-research.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="executing-workflow.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/01-bestpractices.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": ["bookdown-demo.pdf", "bookdown-demo.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

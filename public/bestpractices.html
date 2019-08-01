@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>2 Best practices | Informatics team manual of procedures</title>
+  <meta name="description" content="This is a manual of operations for the Agios Informatics team. Its puspose is to provide a resource on best practices, aid in setting up effective and reproducible project workflows, and promote learning and sharing of ideas." />
+  <meta name="generator" content="bookdown 0.12 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="2 Best practices | Informatics team manual of procedures" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is a manual of operations for the Agios Informatics team. Its puspose is to provide a resource on best practices, aid in setting up effective and reproducible project workflows, and promote learning and sharing of ideas." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="2 Best practices | Informatics team manual of procedures" />
+  
+  <meta name="twitter:description" content="This is a manual of operations for the Agios Informatics team. Its puspose is to provide a resource on best practices, aid in setting up effective and reproducible project workflows, and promote learning and sharing of ideas." />
+  
+
+<meta name="author" content="Ania Tassinari &amp; Caitlin Guccione" />
+
+
+<meta name="date" content="2019-07-29" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html">
+<link rel="next" href="workflows.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+<script src="libs/clipboard-1.7.1/clipboard.min.js"></script>
+<link href="libs/primer-tooltips-1.4.0/build.css" rel="stylesheet" />
+<link href="libs/klippy-0.0.0.9500/css/klippy.min.css" rel="stylesheet" />
+<script src="libs/klippy-0.0.0.9500/js/klippy.min.js"></script>
+
+
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Informatics MOP</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> About</a></li>
+<li class="chapter" data-level="2" data-path="bestpractices.html"><a href="bestpractices.html"><i class="fa fa-check"></i><b>2</b> Best practices</a><ul>
+<li class="chapter" data-level="2.1" data-path="bestpractices.html"><a href="bestpractices.html#reproducible-research"><i class="fa fa-check"></i><b>2.1</b> Reproducible research</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="bestpractices.html"><a href="bestpractices.html#purpose"><i class="fa fa-check"></i><b>2.1.1</b> Purpose</a></li>
+<li class="chapter" data-level="2.1.2" data-path="bestpractices.html"><a href="bestpractices.html#dos-and-donts-of-reproducible-research"><i class="fa fa-check"></i><b>2.1.2</b> DO’s and DON’T’s of reproducible research</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="bestpractices.html"><a href="bestpractices.html#version-control"><i class="fa fa-check"></i><b>2.2</b> Version control</a></li>
+<li class="chapter" data-level="2.3" data-path="bestpractices.html"><a href="bestpractices.html#code-guidelines"><i class="fa fa-check"></i><b>2.3</b> Code guidelines</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="bestpractices.html"><a href="bestpractices.html#r"><i class="fa fa-check"></i><b>2.3.1</b> R</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="workflows.html"><a href="workflows.html"><i class="fa fa-check"></i><b>3</b> Project Workflows</a><ul>
+<li class="chapter" data-level="3.1" data-path="workflows.html"><a href="workflows.html#using-workflowr"><i class="fa fa-check"></i><b>3.1</b> Using Workflowr</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="workflows.html"><a href="workflows.html#quick-start"><i class="fa fa-check"></i><b>3.1.1</b> Quick Start</a><ul>
+<li class="chapter" data-level="3.1.1.1" data-path="workflows.html"><a href="workflows.html#set-up"><i class="fa fa-check"></i><b>3.1.1.1</b> Set Up</a></li>
+<li class="chapter" data-level="3.1.1.2" data-path="workflows.html"><a href="workflows.html#creating-projects"><i class="fa fa-check"></i><b>3.1.1.2</b> Creating Projects</a></li>
+<li class="chapter" data-level="3.1.1.3" data-path="workflows.html"><a href="workflows.html#connecting-to-gitlab"><i class="fa fa-check"></i><b>3.1.1.3</b> Connecting to GitLab</a></li>
+<li class="chapter" data-level="3.1.1.4" data-path="workflows.html"><a href="workflows.html#creating-a-new-file"><i class="fa fa-check"></i><b>3.1.1.4</b> Creating a New File</a></li>
+<li class="chapter" data-level="3.1.1.5" data-path="workflows.html"><a href="workflows.html#quick-useful-additions"><i class="fa fa-check"></i><b>3.1.1.5</b> Quick Useful Additions</a></li>
+<li class="chapter" data-level="3.1.1.6" data-path="workflows.html"><a href="workflows.html#adding-packrat"><i class="fa fa-check"></i><b>3.1.1.6</b> Adding PackRat</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="workflows.html"><a href="workflows.html#the-full-guide-to-using-workflowr"><i class="fa fa-check"></i>The Full Guide to Using Workflowr</a></li>
+<li class="chapter" data-level="3.1.2" data-path="workflows.html"><a href="workflows.html#installation"><i class="fa fa-check"></i><b>3.1.2</b> Installation</a><ul>
+<li class="chapter" data-level="3.1.2.1" data-path="workflows.html"><a href="workflows.html#programs-needed"><i class="fa fa-check"></i><b>3.1.2.1</b> Programs Needed</a></li>
+<li class="chapter" data-level="3.1.2.2" data-path="workflows.html"><a href="workflows.html#installing-workflowr"><i class="fa fa-check"></i><b>3.1.2.2</b> Installing Workflowr</a></li>
+<li><a href="workflows.html#configure-git-this-only-needs-to-be-done-once-per-laptop"><span class="toc-section-number">3.1.2.3</span> Configure Git<em>
+</em>This only needs to be done once per laptop</a></li>
+</ul></li>
+<li class="chapter" data-level="3.1.3" data-path="workflows.html"><a href="workflows.html#create-project"><i class="fa fa-check"></i><b>3.1.3</b> Create Project</a><ul>
+<li class="chapter" data-level="3.1.3.1" data-path="workflows.html"><a href="workflows.html#start-project"><i class="fa fa-check"></i><b>3.1.3.1</b> Start Project</a></li>
+<li class="chapter" data-level="3.1.3.2" data-path="workflows.html"><a href="workflows.html#build-project"><i class="fa fa-check"></i><b>3.1.3.2</b> Build Project*</a></li>
+<li class="chapter" data-level="3.1.3.3" data-path="workflows.html"><a href="workflows.html#view-project"><i class="fa fa-check"></i><b>3.1.3.3</b> View Project*</a></li>
+<li class="chapter" data-level="3.1.3.4" data-path="workflows.html"><a href="workflows.html#publish-website"><i class="fa fa-check"></i><b>3.1.3.4</b> Publish Website</a></li>
+</ul></li>
+<li class="chapter" data-level="3.1.4" data-path="workflows.html"><a href="workflows.html#connecting-to-gitlab-1"><i class="fa fa-check"></i><b>3.1.4</b> Connecting to GitLab</a><ul>
+<li class="chapter" data-level="3.1.4.1" data-path="workflows.html"><a href="workflows.html#creating-a-remote-repository-on-gitlab"><i class="fa fa-check"></i><b>3.1.4.1</b> Creating a remote repository on GitLab</a></li>
+<li class="chapter" data-level="" data-path="workflows.html"><a href="workflows.html#not-working-do-you-have-an-ssh-key"><i class="fa fa-check"></i>Not working? Do you have an ssh key? *</a></li>
+<li class="chapter" data-level="3.1.4.2" data-path="workflows.html"><a href="workflows.html#connect-rstudio-and-gitlab"><i class="fa fa-check"></i><b>3.1.4.2</b> Connect RStudio and GitLab</a></li>
+</ul></li>
+<li class="chapter" data-level="3.1.5" data-path="workflows.html"><a href="workflows.html#adding-new-files"><i class="fa fa-check"></i><b>3.1.5</b> Adding New Files</a><ul>
+<li class="chapter" data-level="3.1.5.1" data-path="workflows.html"><a href="workflows.html#creating-new-files"><i class="fa fa-check"></i><b>3.1.5.1</b> Creating New Files</a></li>
+<li class="chapter" data-level="3.1.5.2" data-path="workflows.html"><a href="workflows.html#update-your-changes"><i class="fa fa-check"></i><b>3.1.5.2</b> Update your Changes</a></li>
+<li class="chapter" data-level="3.1.5.3" data-path="workflows.html"><a href="workflows.html#adding-workflowr-to-new-file"><i class="fa fa-check"></i><b>3.1.5.3</b> Adding Workflowr to New File</a></li>
+</ul></li>
+<li class="chapter" data-level="3.1.6" data-path="workflows.html"><a href="workflows.html#quick-additions-to-improve-your-workflowr"><i class="fa fa-check"></i><b>3.1.6</b> Quick Additions to Improve your Workflowr</a><ul>
+<li class="chapter" data-level="3.1.6.1" data-path="workflows.html"><a href="workflows.html#adding-packrat-1"><i class="fa fa-check"></i><b>3.1.6.1</b> Adding PackRat</a></li>
+<li class="chapter" data-level="3.1.6.2" data-path="workflows.html"><a href="workflows.html#update-session-information-function-1"><i class="fa fa-check"></i><b>3.1.6.2</b> Update Session Information Function</a></li>
+<li class="chapter" data-level="3.1.6.3" data-path="workflows.html"><a href="workflows.html#publish-to-gitlab-without-rebuilding-sites-1"><i class="fa fa-check"></i><b>3.1.6.3</b> Publish to GitLab without Rebuilding Sites</a></li>
+</ul></li>
+<li class="chapter" data-level="3.1.7" data-path="workflows.html"><a href="workflows.html#create-a-live-shareable-webpage"><i class="fa fa-check"></i><b>3.1.7</b> Create a LIVE Shareable Webpage</a><ul>
+<li class="chapter" data-level="3.1.7.1" data-path="workflows.html"><a href="workflows.html#a-simple-trick"><i class="fa fa-check"></i><b>3.1.7.1</b> A Simple Trick</a></li>
+<li class="chapter" data-level="3.1.7.2" data-path="workflows.html"><a href="workflows.html#gitlab-pages"><i class="fa fa-check"></i><b>3.1.7.2</b> GitLab Pages</a></li>
+<li class="chapter" data-level="3.1.7.3" data-path="workflows.html"><a href="workflows.html#beaker-browser"><i class="fa fa-check"></i><b>3.1.7.3</b> Beaker Browser</a></li>
+</ul></li>
+<li class="chapter" data-level="3.1.8" data-path="workflows.html"><a href="workflows.html#styling-the-webpage"><i class="fa fa-check"></i><b>3.1.8</b> Styling the Webpage</a><ul>
+<li class="chapter" data-level="3.1.8.1" data-path="workflows.html"><a href="workflows.html#helpful-links"><i class="fa fa-check"></i><b>3.1.8.1</b> Helpful Links</a></li>
+<li class="chapter" data-level="3.1.8.2" data-path="workflows.html"><a href="workflows.html#changing-the-theme"><i class="fa fa-check"></i><b>3.1.8.2</b> Changing the Theme</a></li>
+<li class="chapter" data-level="3.1.8.3" data-path="workflows.html"><a href="workflows.html#adding-photos"><i class="fa fa-check"></i><b>3.1.8.3</b> Adding Photos</a></li>
+<li class="chapter" data-level="3.1.8.4" data-path="workflows.html"><a href="workflows.html#blogdown"><i class="fa fa-check"></i><b>3.1.8.4</b> Blogdown</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="workflows.html"><a href="workflows.html#set-up-workflow-and-executing"><i class="fa fa-check"></i><b>3.2</b> Set Up Workflow and Executing</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="workflows.html"><a href="workflows.html#create-a-folder-for-your-newproject"><i class="fa fa-check"></i><b>3.2.1</b> Create a folder for your <em>newproject</em></a><ul>
+<li class="chapter" data-level="3.2.1.1" data-path="workflows.html"><a href="workflows.html#copy-from-a-previously-created-template-folder"><i class="fa fa-check"></i><b>3.2.1.1</b> Copy from a previously created template folder</a></li>
+<li class="chapter" data-level="3.2.1.2" data-path="workflows.html"><a href="workflows.html#use-a-bash-script"><i class="fa fa-check"></i><b>3.2.1.2</b> Use a <code>bash</code> script</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2.2" data-path="workflows.html"><a href="workflows.html#set-up-a-repository-for-your-code-on-agios-secure-gitlab"><i class="fa fa-check"></i><b>3.2.2</b> Set up a repository for your code on Agios’ secure GitLab</a></li>
+<li class="chapter" data-level="3.2.3" data-path="workflows.html"><a href="workflows.html#set-up-a-repository-for-your-code-locally-and-link-to-gitlab"><i class="fa fa-check"></i><b>3.2.3</b> Set up a repository for your code locally and link to GitLab</a></li>
+<li class="chapter" data-level="3.2.4" data-path="workflows.html"><a href="workflows.html#set-up-an-r-project-in-rstudio"><i class="fa fa-check"></i><b>3.2.4</b> Set up an R project in RStudio</a></li>
+<li class="chapter" data-level="3.2.5" data-path="workflows.html"><a href="workflows.html#analysis-in-r-and-rstudio"><i class="fa fa-check"></i><b>3.2.5</b> Analysis in R and RStudio</a></li>
+<li class="chapter" data-level="3.2.6" data-path="workflows.html"><a href="workflows.html#version-control-in-git-and-gitlab"><i class="fa fa-check"></i><b>3.2.6</b> Version control in git and GitLab</a></li>
+<li class="chapter" data-level="3.2.7" data-path="workflows.html"><a href="workflows.html#keeping-track-of-enviroment"><i class="fa fa-check"></i><b>3.2.7</b> Keeping track of enviroment</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="toolbox.html"><a href="toolbox.html"><i class="fa fa-check"></i><b>4</b> Toolbox</a><ul>
+<li class="chapter" data-level="4.1" data-path="toolbox.html"><a href="toolbox.html#command-line-tools"><i class="fa fa-check"></i><b>4.1</b> Command Line Tools</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="toolbox.html"><a href="toolbox.html#bioinformatics"><i class="fa fa-check"></i><b>4.1.1</b> Bioinformatics</a><ul>
+<li class="chapter" data-level="4.1.1.1" data-path="toolbox.html"><a href="toolbox.html#get-average-read-length-from-a-.bam-file"><i class="fa fa-check"></i><b>4.1.1.1</b> Get average read length from a <code>.bam</code> file</a></li>
+</ul></li>
+<li class="chapter" data-level="4.1.2" data-path="toolbox.html"><a href="toolbox.html#docker"><i class="fa fa-check"></i><b>4.1.2</b> Docker</a><ul>
+<li class="chapter" data-level="4.1.2.1" data-path="toolbox.html"><a href="toolbox.html#basic-commands"><i class="fa fa-check"></i><b>4.1.2.1</b> Basic commands</a></li>
+<li class="chapter" data-level="4.1.2.2" data-path="toolbox.html"><a href="toolbox.html#pruning"><i class="fa fa-check"></i><b>4.1.2.2</b> Pruning</a></li>
+</ul></li>
+<li class="chapter" data-level="4.1.3" data-path="toolbox.html"><a href="toolbox.html#file-system"><i class="fa fa-check"></i><b>4.1.3</b> File system</a><ul>
+<li class="chapter" data-level="4.1.3.1" data-path="toolbox.html"><a href="toolbox.html#list-top-5-largest-files"><i class="fa fa-check"></i><b>4.1.3.1</b> List top 5 largest files</a></li>
+<li class="chapter" data-level="4.1.3.2" data-path="toolbox.html"><a href="toolbox.html#list-files-in-a-folder-separated-by-delimeter"><i class="fa fa-check"></i><b>4.1.3.2</b> List files in a folder separated by delimeter</a></li>
+<li class="chapter" data-level="4.1.3.3" data-path="toolbox.html"><a href="toolbox.html#compare-structure-of-two-directories"><i class="fa fa-check"></i><b>4.1.3.3</b> Compare structure of two directories</a></li>
+</ul></li>
+<li class="chapter" data-level="4.1.4" data-path="toolbox.html"><a href="toolbox.html#sun-grid-engine"><i class="fa fa-check"></i><b>4.1.4</b> Sun Grid Engine</a><ul>
+<li class="chapter" data-level="4.1.4.1" data-path="toolbox.html"><a href="toolbox.html#deprioritize-jobs-queued-on-sge"><i class="fa fa-check"></i><b>4.1.4.1</b> Deprioritize jobs queued on SGE</a></li>
+</ul></li>
+<li class="chapter" data-level="4.1.5" data-path="toolbox.html"><a href="toolbox.html#vim"><i class="fa fa-check"></i><b>4.1.5</b> vim</a><ul>
+<li class="chapter" data-level="4.1.5.1" data-path="toolbox.html"><a href="toolbox.html#repeat-content-of-line-in-new-column"><i class="fa fa-check"></i><b>4.1.5.1</b> Repeat content of line in new column</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="toolbox.html"><a href="toolbox.html#r-1"><i class="fa fa-check"></i><b>4.2</b> R</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="toolbox.html"><a href="toolbox.html#heatmaps"><i class="fa fa-check"></i><b>4.2.1</b> Heatmaps</a></li>
+<li class="chapter" data-level="4.2.2" data-path="toolbox.html"><a href="toolbox.html#addition"><i class="fa fa-check"></i><b>4.2.2</b> Addition</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="toolbox.html"><a href="toolbox.html#python"><i class="fa fa-check"></i><b>4.3</b> python</a></li>
+<li class="chapter" data-level="4.4" data-path="toolbox.html"><a href="toolbox.html#perl"><i class="fa fa-check"></i><b>4.4</b> perl</a><ul>
+<li class="chapter" data-level="4.4.0.1" data-path="toolbox.html"><a href="toolbox.html#get-number-of-lines-in-a-file"><i class="fa fa-check"></i><b>4.4.0.1</b> Get number of lines in a file</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Informatics team manual of procedures</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="bestpractices" class="section level1">
+<h1><span class="header-section-number">2</span> Best practices</h1>
+<div id="reproducible-research" class="section level2">
+<h2><span class="header-section-number">2.1</span> Reproducible research</h2>
+<div id="purpose" class="section level3">
+<h3><span class="header-section-number">2.1.1</span> Purpose</h3>
+<ol style="list-style-type: decimal">
+<li>Improve collaborative analyses:</li>
+</ol>
+<ul>
+<li>make sharing easier</li>
+<li>enable retrieval and interpretation of results long after analysis ended</li>
+</ul>
+<ol start="2" style="list-style-type: decimal">
+<li><p>Simplify hand-off to Biostats</p></li>
+<li><p>Improve confidence in our data and results</p></li>
+</ol>
+<p><img src="images/reprodresearch.jpg" /><!-- --></p>
+<p>Source: <a href=https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3383002/pdf/nihms382015.pdf>Peng et al., <em>Reproducible Research in Computational Science</em>. Science 2011.</a></p>
+</div>
+<div id="dos-and-donts-of-reproducible-research" class="section level3">
+<h3><span class="header-section-number">2.1.2</span> DO’s and DON’T’s of reproducible research</h3>
+<!--
+<span class="badge badge-success">DO</span> start with good science <br> 
+<span class="badge badge-danger">DON'T</span> do things by hand <br>
+  Was any part of this analysis done by hand? <br>
+    - If so, are those parts precisely documented? <br>
+    - Does the documentation match reality? <br>
+<span class="badge badge-danger">DON'T</span> point and click<br>
+<span class="badge badge-success">DO</span> teach a computer<br>
+<span class="badge badge-success">DO</span> use version control<br>
+<span class="badge badge-success">DO</span> keep track of your software environment<br>
+<span class="badge badge-danger">DON'T</span> save any output (until it's time to write a paper)<br>
+<span class="badge badge-success">DO</span> set your seed<br>
+-->
+<ul>
+<li>DO start with good science</li>
+<li>DON’T do things by hand
+<ul>
+<li>Was any part of this analysis done by hand?
+<ul>
+<li>If so, are those parts precisely documented?</li>
+<li>Does the documentation match reality?</li>
+</ul></li>
+</ul></li>
+<li>DON’T point and click</li>
+<li>DO teach a computer</li>
+<li>DO use version control</li>
+<li>DO keep track of your software environment</li>
+<li>DON’T save any output (until it’s time to write a paper)</li>
+<li>DO set your seed</li>
+</ul>
+<p>Source: <a href=https://d18ky98rnyall9.cloudfront.net/_675d65293ef671c7dc754b3bd2779da6_Checklist.pdf?Expires=1525392000&Signature=XC-8TNzRrnwFEL5l6xadO9zD1jJxsLjfTwGovr1F6W~lWqZt0B2irE7zHKdQ2kJuQIF650WNaCPJzvnW83E-OaUDaCk4xIhhjdBVwMrJlgDGd3J8sOX2KlL8XRiZTdw3wbXa-C4JZ1r9tpuURHsZyleHTlorJ0ZGWN4VhuBtPd8_&Key-Pair-Id=APKAJLTNE6QMUY6HBC5A>Reproducible Research at Coursera</a></p>
+</div>
+</div>
+<div id="version-control" class="section level2">
+<h2><span class="header-section-number">2.2</span> Version control</h2>
+</div>
+<div id="code-guidelines" class="section level2">
+<h2><span class="header-section-number">2.3</span> Code guidelines</h2>
+<div id="r" class="section level3">
+<h3><span class="header-section-number">2.3.1</span> R</h3>
+<ul>
+<li><a href="https://style.tidyverse.org">Tidyverse Style Guide</a></li>
+<li><a href="https://google.github.io/styleguide/Rguide.xml">Google’s R Style Guide</a></li>
+</ul>
+
+<!-- This creates wrapping for every code chunk in this file -->
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="workflows.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "http://ceres.agios.com/informatics/IMOP/blob/development/01-bestpractices.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": ["bookdown-demo.pdf", "bookdown-demo.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

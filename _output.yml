@@ -1,0 +1,18 @@
+bookdown::gitbook:
+  toc_depth: 4
+  css: style.css
+  config:
+    split_by: "chapter+number"
+    toc:
+      before: |
+        <li><a href="./">Informatics MOP</a></li>
+      after: |
+        <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+    edit: http://hpc.agios.local/informatics/IMOP/blob/development/%s
+    download: ["pdf", "epub"]
+bookdown::pdf_book:
+  toc: FALSE
+  latex_engine: xelatex
+  citation_package: natbib
+  keep_tex: yes
+bookdown::epub_book: default

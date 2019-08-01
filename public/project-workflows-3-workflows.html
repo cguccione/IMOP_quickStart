@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 3 Project workflows {- 3. #workflows} | Informatics team manual of procedures</title>
+  <meta name="description" content="This is a manual of operations for the Agios Informatics team. Its puspose is to provide a resource on best practices, aid in setting up effective and reproducible project workflows, and promote learning and sharing of ideas." />
+  <meta name="generator" content="bookdown 0.11 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 3 Project workflows {- 3. #workflows} | Informatics team manual of procedures" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is a manual of operations for the Agios Informatics team. Its puspose is to provide a resource on best practices, aid in setting up effective and reproducible project workflows, and promote learning and sharing of ideas." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 3 Project workflows {- 3. #workflows} | Informatics team manual of procedures" />
+  
+  <meta name="twitter:description" content="This is a manual of operations for the Agios Informatics team. Its puspose is to provide a resource on best practices, aid in setting up effective and reproducible project workflows, and promote learning and sharing of ideas." />
+  
+
+<meta name="author" content="Ania Tassinari" />
+
+
+<meta name="date" content="2019-06-27" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="bestpractices.html">
+<link rel="next" href="toolbox.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Informatics MOP</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> About</a></li>
+<li class="chapter" data-level="2" data-path="bestpractices.html"><a href="bestpractices.html"><i class="fa fa-check"></i><b>2</b> Best practices</a><ul>
+<li class="chapter" data-level="2.1" data-path="bestpractices.html"><a href="bestpractices.html#reproducible-research"><i class="fa fa-check"></i><b>2.1</b> Reproducible research</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="bestpractices.html"><a href="bestpractices.html#purpose"><i class="fa fa-check"></i><b>2.1.1</b> Purpose</a></li>
+<li class="chapter" data-level="2.1.2" data-path="bestpractices.html"><a href="bestpractices.html#dos-and-donts-of-reproducible-research"><i class="fa fa-check"></i><b>2.1.2</b> DO’s and DON’T’s of reproducible research</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="bestpractices.html"><a href="bestpractices.html#version-control"><i class="fa fa-check"></i><b>2.2</b> Version control</a></li>
+<li class="chapter" data-level="2.3" data-path="bestpractices.html"><a href="bestpractices.html#code-guidelines"><i class="fa fa-check"></i><b>2.3</b> Code guidelines</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="bestpractices.html"><a href="bestpractices.html#r"><i class="fa fa-check"></i><b>2.3.1</b> R</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="project-workflows-3-workflows.html"><a href="project-workflows-3-workflows.html"><i class="fa fa-check"></i><b>3</b> Project workflows {- 3. #workflows}</a><ul>
+<li class="chapter" data-level="3.1" data-path="project-workflows-3-workflows.html"><a href="project-workflows-3-workflows.html#using-workflowr"><i class="fa fa-check"></i><b>3.1</b> Using Workflowr</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="project-workflows-3-workflows.html"><a href="project-workflows-3-workflows.html#quick-start"><i class="fa fa-check"></i><b>3.1.1</b> Quick Start</a><ul>
+<li class="chapter" data-level="3.1.1.1" data-path="project-workflows-3-workflows.html"><a href="project-workflows-3-workflows.html#set-up"><i class="fa fa-check"></i><b>3.1.1.1</b> Set Up</a></li>
+<li class="chapter" data-level="3.1.1.2" data-path="project-workflows-3-workflows.html"><a href="project-workflows-3-workflows.html#creating-projects"><i class="fa fa-check"></i><b>3.1.1.2</b> Creating Projects</a></li>
+<li class="chapter" data-level="3.1.1.3" data-path="project-workflows-3-workflows.html"><a href="project-workflows-3-workflows.html#connecting-to-gitlab"><i class="fa fa-check"></i><b>3.1.1.3</b> Connecting to GitLab</a></li>
+<li class="chapter" data-level="3.1.1.4" data-path="project-workflows-3-workflows.html"><a href="project-workflows-3-workflows.html#creating-a-new-file"><i class="fa fa-check"></i><b>3.1.1.4</b> Creating a New File</a></li>
+<li class="chapter" data-level="3.1.1.5" data-path="project-workflows-3-workflows.html"><a href="project-workflows-3-workflows.html#publish-to-gitlab-without-rebuilding-sites"><i class="fa fa-check"></i><b>3.1.1.5</b> Publish to GitLab without Rebuilding Sites</a></li>
+</ul></li>
+<li class="chapter" data-level="3.1.2" data-path="project-workflows-3-workflows.html"><a href="project-workflows-3-workflows.html#installation"><i class="fa fa-check"></i><b>3.1.2</b> Installation</a><ul>
+<li class="chapter" data-level="3.1.2.1" data-path="project-workflows-3-workflows.html"><a href="project-workflows-3-workflows.html#programs-needed"><i class="fa fa-check"></i><b>3.1.2.1</b> Programs Needed</a></li>
+<li class="chapter" data-level="3.1.2.2" data-path="project-workflows-3-workflows.html"><a href="project-workflows-3-workflows.html#installing-workflowr"><i class="fa fa-check"></i><b>3.1.2.2</b> Installing Workflowr</a></li>
+<li class="chapter" data-level="3.1.2.3" data-path="project-workflows-3-workflows.html"><a href="project-workflows-3-workflows.html#configure-git"><i class="fa fa-check"></i><b>3.1.2.3</b> Configure Git</a></li>
+</ul></li>
+<li class="chapter" data-level="3.1.3" data-path="project-workflows-3-workflows.html"><a href="project-workflows-3-workflows.html#create-project"><i class="fa fa-check"></i><b>3.1.3</b> Create Project</a><ul>
+<li class="chapter" data-level="3.1.3.1" data-path="project-workflows-3-workflows.html"><a href="project-workflows-3-workflows.html#start-project"><i class="fa fa-check"></i><b>3.1.3.1</b> Start Project</a></li>
+<li class="chapter" data-level="3.1.3.2" data-path="project-workflows-3-workflows.html"><a href="project-workflows-3-workflows.html#build-project"><i class="fa fa-check"></i><b>3.1.3.2</b> Build Project</a></li>
+<li class="chapter" data-level="3.1.3.3" data-path="project-workflows-3-workflows.html"><a href="project-workflows-3-workflows.html#view-project"><i class="fa fa-check"></i><b>3.1.3.3</b> View Project</a></li>
+<li class="chapter" data-level="3.1.3.4" data-path="project-workflows-3-workflows.html"><a href="project-workflows-3-workflows.html#publish-website"><i class="fa fa-check"></i><b>3.1.3.4</b> Publish Website</a></li>
+</ul></li>
+<li class="chapter" data-level="3.1.4" data-path="project-workflows-3-workflows.html"><a href="project-workflows-3-workflows.html#connecting-to-gitlab-1"><i class="fa fa-check"></i><b>3.1.4</b> Connecting to GitLab</a><ul>
+<li class="chapter" data-level="3.1.4.1" data-path="project-workflows-3-workflows.html"><a href="project-workflows-3-workflows.html#creating-a-remote-repository-on-gitlab"><i class="fa fa-check"></i><b>3.1.4.1</b> Creating a remote repository on GitLab</a></li>
+<li class="chapter" data-level="3.1.4.2" data-path="project-workflows-3-workflows.html"><a href="project-workflows-3-workflows.html#not-working-do-you-have-an-ssh-key"><i class="fa fa-check"></i><b>3.1.4.2</b> Not working? Do you have an ssh key? **</a></li>
+<li class="chapter" data-level="3.1.4.3" data-path="project-workflows-3-workflows.html"><a href="project-workflows-3-workflows.html#connect-rstudio-and-gitlab"><i class="fa fa-check"></i><b>3.1.4.3</b> Connect RStudio and GitLab</a></li>
+</ul></li>
+<li class="chapter" data-level="3.1.5" data-path="project-workflows-3-workflows.html"><a href="project-workflows-3-workflows.html#adding-new-files"><i class="fa fa-check"></i><b>3.1.5</b> Adding New Files</a><ul>
+<li class="chapter" data-level="3.1.5.1" data-path="project-workflows-3-workflows.html"><a href="project-workflows-3-workflows.html#creating-new-files"><i class="fa fa-check"></i><b>3.1.5.1</b> Creating New Files</a></li>
+<li class="chapter" data-level="3.1.5.2" data-path="project-workflows-3-workflows.html"><a href="project-workflows-3-workflows.html#update-your-changes"><i class="fa fa-check"></i><b>3.1.5.2</b> Update your Changes</a></li>
+<li class="chapter" data-level="3.1.5.3" data-path="project-workflows-3-workflows.html"><a href="project-workflows-3-workflows.html#adding-workflowr-to-new-file"><i class="fa fa-check"></i><b>3.1.5.3</b> Adding Workflowr to New File</a></li>
+</ul></li>
+<li class="chapter" data-level="3.1.6" data-path="project-workflows-3-workflows.html"><a href="project-workflows-3-workflows.html#styling-the-webpage"><i class="fa fa-check"></i><b>3.1.6</b> Styling the Webpage</a><ul>
+<li class="chapter" data-level="3.1.6.1" data-path="project-workflows-3-workflows.html"><a href="project-workflows-3-workflows.html#helpful-links"><i class="fa fa-check"></i><b>3.1.6.1</b> Helpful Links</a></li>
+<li class="chapter" data-level="3.1.6.2" data-path="project-workflows-3-workflows.html"><a href="project-workflows-3-workflows.html#changing-the-theme"><i class="fa fa-check"></i><b>3.1.6.2</b> Changing the Theme</a></li>
+<li class="chapter" data-level="3.1.6.3" data-path="project-workflows-3-workflows.html"><a href="project-workflows-3-workflows.html#adding-photos"><i class="fa fa-check"></i><b>3.1.6.3</b> Adding Photos</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="project-workflows-3-workflows.html"><a href="project-workflows-3-workflows.html#set-up-workflow-and-executing"><i class="fa fa-check"></i><b>3.2</b> Set Up Workflow and Executing</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="project-workflows-3-workflows.html"><a href="project-workflows-3-workflows.html#create-a-folder-for-your-newproject"><i class="fa fa-check"></i><b>3.2.1</b> Create a folder for your <em>newproject</em></a><ul>
+<li class="chapter" data-level="3.2.1.1" data-path="project-workflows-3-workflows.html"><a href="project-workflows-3-workflows.html#copy-from-a-previously-created-template-folder"><i class="fa fa-check"></i><b>3.2.1.1</b> Copy from a previously created template folder</a></li>
+<li class="chapter" data-level="3.2.1.2" data-path="project-workflows-3-workflows.html"><a href="project-workflows-3-workflows.html#use-a-bash-script"><i class="fa fa-check"></i><b>3.2.1.2</b> Use a <code>bash</code> script</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2.2" data-path="project-workflows-3-workflows.html"><a href="project-workflows-3-workflows.html#set-up-a-repository-for-your-code-on-agios-secure-gitlab"><i class="fa fa-check"></i><b>3.2.2</b> Set up a repository for your code on Agios’ secure GitLab</a></li>
+<li class="chapter" data-level="3.2.3" data-path="project-workflows-3-workflows.html"><a href="project-workflows-3-workflows.html#set-up-a-repository-for-your-code-locally-and-link-to-gitlab"><i class="fa fa-check"></i><b>3.2.3</b> Set up a repository for your code locally and link to GitLab</a></li>
+<li class="chapter" data-level="3.2.4" data-path="project-workflows-3-workflows.html"><a href="project-workflows-3-workflows.html#set-up-an-r-project-in-rstudio"><i class="fa fa-check"></i><b>3.2.4</b> Set up an R project in RStudio</a></li>
+<li class="chapter" data-level="3.2.5" data-path="project-workflows-3-workflows.html"><a href="project-workflows-3-workflows.html#analysis-in-r-and-rstudio"><i class="fa fa-check"></i><b>3.2.5</b> Analysis in R and RStudio</a></li>
+<li class="chapter" data-level="3.2.6" data-path="project-workflows-3-workflows.html"><a href="project-workflows-3-workflows.html#version-control-in-git-and-gitlab"><i class="fa fa-check"></i><b>3.2.6</b> Version control in git and GitLab</a></li>
+<li class="chapter" data-level="3.2.7" data-path="project-workflows-3-workflows.html"><a href="project-workflows-3-workflows.html#keeping-track-of-enviroment"><i class="fa fa-check"></i><b>3.2.7</b> Keeping track of enviroment</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="toolbox.html"><a href="toolbox.html"><i class="fa fa-check"></i><b>4</b> Toolbox</a><ul>
+<li class="chapter" data-level="4.1" data-path="toolbox.html"><a href="toolbox.html#command-line-tools"><i class="fa fa-check"></i><b>4.1</b> Command Line Tools</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="toolbox.html"><a href="toolbox.html#bioinformatics"><i class="fa fa-check"></i><b>4.1.1</b> Bioinformatics</a><ul>
+<li class="chapter" data-level="4.1.1.1" data-path="toolbox.html"><a href="toolbox.html#get-average-read-length-from-a-.bam-file"><i class="fa fa-check"></i><b>4.1.1.1</b> Get average read length from a <code>.bam</code> file</a></li>
+</ul></li>
+<li class="chapter" data-level="4.1.2" data-path="toolbox.html"><a href="toolbox.html#docker"><i class="fa fa-check"></i><b>4.1.2</b> Docker</a><ul>
+<li class="chapter" data-level="4.1.2.1" data-path="toolbox.html"><a href="toolbox.html#basic-commands"><i class="fa fa-check"></i><b>4.1.2.1</b> Basic commands</a></li>
+<li class="chapter" data-level="4.1.2.2" data-path="toolbox.html"><a href="toolbox.html#pruning"><i class="fa fa-check"></i><b>4.1.2.2</b> Pruning</a></li>
+</ul></li>
+<li class="chapter" data-level="4.1.3" data-path="toolbox.html"><a href="toolbox.html#file-system"><i class="fa fa-check"></i><b>4.1.3</b> File system</a><ul>
+<li class="chapter" data-level="4.1.3.1" data-path="toolbox.html"><a href="toolbox.html#list-top-5-largest-files"><i class="fa fa-check"></i><b>4.1.3.1</b> List top 5 largest files</a></li>
+<li class="chapter" data-level="4.1.3.2" data-path="toolbox.html"><a href="toolbox.html#list-files-in-a-folder-separated-by-delimeter"><i class="fa fa-check"></i><b>4.1.3.2</b> List files in a folder separated by delimeter</a></li>
+<li class="chapter" data-level="4.1.3.3" data-path="toolbox.html"><a href="toolbox.html#compare-structure-of-two-directories"><i class="fa fa-check"></i><b>4.1.3.3</b> Compare structure of two directories</a></li>
+</ul></li>
+<li class="chapter" data-level="4.1.4" data-path="toolbox.html"><a href="toolbox.html#sun-grid-engine"><i class="fa fa-check"></i><b>4.1.4</b> Sun Grid Engine</a><ul>
+<li class="chapter" data-level="4.1.4.1" data-path="toolbox.html"><a href="toolbox.html#deprioritize-jobs-queued-on-sge"><i class="fa fa-check"></i><b>4.1.4.1</b> Deprioritize jobs queued on SGE</a></li>
+</ul></li>
+<li class="chapter" data-level="4.1.5" data-path="toolbox.html"><a href="toolbox.html#vim"><i class="fa fa-check"></i><b>4.1.5</b> vim</a><ul>
+<li class="chapter" data-level="4.1.5.1" data-path="toolbox.html"><a href="toolbox.html#repeat-content-of-line-in-new-column"><i class="fa fa-check"></i><b>4.1.5.1</b> Repeat content of line in new column</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="toolbox.html"><a href="toolbox.html#r-1"><i class="fa fa-check"></i><b>4.2</b> R</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="toolbox.html"><a href="toolbox.html#heatmaps"><i class="fa fa-check"></i><b>4.2.1</b> Heatmaps</a></li>
+<li class="chapter" data-level="4.2.2" data-path="toolbox.html"><a href="toolbox.html#addition"><i class="fa fa-check"></i><b>4.2.2</b> Addition</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="toolbox.html"><a href="toolbox.html#python"><i class="fa fa-check"></i><b>4.3</b> python</a></li>
+<li class="chapter" data-level="4.4" data-path="toolbox.html"><a href="toolbox.html#perl"><i class="fa fa-check"></i><b>4.4</b> perl</a><ul>
+<li class="chapter" data-level="4.4.0.1" data-path="toolbox.html"><a href="toolbox.html#get-number-of-lines-in-a-file"><i class="fa fa-check"></i><b>4.4.0.1</b> Get number of lines in a file</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Informatics team manual of procedures</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="project-workflows---3.-workflows" class="section level1">
+<h1><span class="header-section-number">Chapter 3</span> Project workflows {- 3. #workflows}</h1>
+<!-- Start of Caitlin Guccione Workflowr - Summer 2019 -->
+<div id="using-workflowr" class="section level2">
+<h2><span class="header-section-number">3.1</span> Using Workflowr</h2>
+<div id="quick-start" class="section level3">
+<h3><span class="header-section-number">3.1.1</span> Quick Start</h3>
+<p>This is a quick version of everything listed below, if you want more clear or specific instructions then please skip this section.</p>
+<div id="set-up" class="section level4">
+<h4><span class="header-section-number">3.1.1.1</span> Set Up</h4>
+<p>In the <code>Console</code> tab of RStudio in <code>(None)</code> project:</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="st">&quot;workflowr&quot;</span>)
+<span class="kw">library</span>(<span class="st">&quot;workflowr&quot;</span>)
+<span class="kw">wflow_git_config</span>(<span class="dt">user.name =</span> <span class="st">&quot;First Last&quot;</span>, <span class="dt">user.email =</span> <span class="st">&quot;first.last@agios.com&quot;</span>)</code></pre>
+</div>
+<div id="creating-projects" class="section level4">
+<h4><span class="header-section-number">3.1.1.2</span> Creating Projects</h4>
+<p>In the <code>Console</code> tab,</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">wflow_start</span>(<span class="st">&quot;PROJECT_NAME&quot;</span>)
+<span class="kw">wflow_build</span>()
+<span class="kw">wflow_publish</span>(<span class="kw">c</span>(<span class="st">&quot;analysis/*.Rmd&quot;</span>), <span class="st">&quot;Publish the initial files for PROJECT_NAME&quot;</span>)</code></pre>
+</div>
+<div id="connecting-to-gitlab" class="section level4">
+<h4><span class="header-section-number">3.1.1.3</span> Connecting to GitLab</h4>
+<p>In the <code>Console</code> tab,</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">wflow_use_gitlab</span>(<span class="dt">username =</span> <span class="st">&quot;first.last&quot;</span>, <span class="dt">repository =</span> <span class="st">&quot;PROJECT_NAME&quot;</span>, <span class="dt">domain =</span> <span class="st">&quot;ceres.agios.com&quot;</span>)</code></pre>
+<p>Go to GitLab and do the following:</p>
+<ul>
+<li>Create a project in GitLab should the same name as the project in RStudio
+<ul>
+<li>We called our project: PROJECT_NAME</li>
+</ul></li>
+<li>Go back to GitLab and scroll down to the push an existing Git repository option
+<ul>
+<li>Then, copy everything in the box besides the cd line</li>
+</ul></li>
+<li>Paste what you just copied into the <code>Terminal</code> tab in RStudio
+<ul>
+<li>Make sure you are in PROJECT_NAME directory</li>
+</ul></li>
+</ul>
+</div>
+<div id="creating-a-new-file" class="section level4">
+<h4><span class="header-section-number">3.1.1.4</span> Creating a New File</h4>
+<p>In the <code>Console</code> tab,</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">wflow_open</span>(<span class="st">&quot;analysis/NEW_FILE.Rmd&quot;</span>)
+<span class="kw">wflow_build</span>()
+<span class="kw">wflow_publish</span>(<span class="kw">c</span>(<span class="st">&quot;analysis/*.Rmd&quot;</span>), <span class="st">&quot;Publish the file NEW_FILE&quot;</span>)</code></pre>
+<p>In the <code>Terminal</code> tab,</p>
+<pre class="sourceCode r"><code class="sourceCode r">git push</code></pre>
+</div>
+<div id="publish-to-gitlab-without-rebuilding-sites" class="section level4">
+<h4><span class="header-section-number">3.1.1.5</span> Publish to GitLab without Rebuilding Sites</h4>
+<ol style="list-style-type: decimal">
+<li>Edit the Rmd file and save</li>
+<li>Run one of the following commands (doesn’t matter)
+<ul>
+<li><code>wflow_build()</code>
+<ul>
+<li>It doesn’t matter if we build other files, they won’t be added to git unless we add them in the next step</li>
+</ul></li>
+<li><code>wflow_build(&quot;file.rmd&quot;)</code></li>
+<li>Knit the file</li>
+</ul></li>
+<li><code>wflow_git_commit(&quot;file.rmd&quot;, &quot;This is your commit message&quot;)</code></li>
+<li>Flip into the terminal and run <code>git push()</code></li>
+</ol>
+</div>
+</div>
+<div id="installation" class="section level3">
+<h3><span class="header-section-number">3.1.2</span> Installation</h3>
+<div id="programs-needed" class="section level4">
+<h4><span class="header-section-number">3.1.2.1</span> Programs Needed</h4>
+<p>We are assuming that you already have RStuido and GitLab, for this implementation we are using the RStudio on the new server (hpc.agios.local) which is version 1.2.1335.1.</p>
+<p>If you don’t have GitLab you need to have an account set up through Agios. If you don’t have the updated RStudio you need to get access to the new server and then use the following link : <a href="https://hpc.agios.local">hpc.agios.local</a></p>
+</div>
+<div id="installing-workflowr" class="section level4">
+<h4><span class="header-section-number">3.1.2.2</span> Installing Workflowr</h4>
+<ol style="list-style-type: decimal">
+<li>Open RStudio and change project in the top right corner to <code>(None)</code>
+<ul>
+<li>Make sure you are in your home directory on RStudio as well, thus in the bottom right corner of your screen under <code>New Folder</code>, it is labeled <code>Home</code> with a small house.</li>
+</ul></li>
+<li>In the <code>Console</code> tab located in the bottom left hand corner :</li>
+</ol>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="st">&quot;workflowr&quot;</span>)</code></pre>
+<ol start="3" style="list-style-type: decimal">
+<li>Confirm you have access to Workflowr, in the <code>Console</code> tab:</li>
+</ol>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(<span class="st">&quot;workflowr&quot;</span>)</code></pre>
+</div>
+<div id="configure-git" class="section level4">
+<h4><span class="header-section-number">3.1.2.3</span> Configure Git</h4>
+<p>*This only needs to be done once per laptop</p>
+<p>In the <code>Console</code> tab:</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">wflow_git_config</span>(<span class="dt">user.name =</span> <span class="st">&quot;First Last&quot;</span>, <span class="dt">user.email =</span> <span class="st">&quot;first.last@agios.com&quot;</span>)</code></pre>
+</div>
+</div>
+<div id="create-project" class="section level3">
+<h3><span class="header-section-number">3.1.3</span> Create Project</h3>
+<div id="start-project" class="section level4">
+<h4><span class="header-section-number">3.1.3.1</span> Start Project</h4>
+<p>In the <code>Console</code> tab:</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">wflow_start</span>(<span class="st">&quot;PROJECT_NAME&quot;</span>)</code></pre>
+<ol style="list-style-type: decimal">
+<li>What does <code>wflow_start</code> do?
+<ul>
+<li>Creates a directory that contains all starting files</li>
+<li>Changes your current directory to PROJECT_NAME</li>
+<li>Starts a Git repo which we will connect to GitLab repository</li>
+</ul></li>
+<li>What is the <code>analysis</code> folder for?
+<ul>
+<li>Contains all source R Markdown files (Rmd)
+<ul>
+<li>Includes: <code>index.rmd</code>
+<ul>
+<li>Contains no R code but generates <code>index.html</code> which eventually runs the entire project</li>
+</ul></li>
+</ul></li>
+<li>Contains <code>_site.yml</code>
+<ul>
+<li>Allows user to edit theme, navigation bar, menus ect.</li>
+<li>Helpful <a href="https://bookdown.org/yihui/rmarkdown/rmarkdown-site.html">link</a> to customizing</li>
+</ul></li>
+</ul></li>
+<li>What is the <code>docs</code> folder for?
+<ul>
+<li>Contains all HTML files for website
+<ul>
+<li>Note that this file will be empty until we build the project</li>
+<li>Each HTML file is built from a corresponding Rmd file in the analysis folder</li>
+</ul></li>
+<li>Contains any figures created by Rmd files</li>
+</ul></li>
+<li>What about the data, code and output files?
+<ul>
+<li>These files are there for your use and thus can be deleted if desired</li>
+</ul></li>
+</ol>
+</div>
+<div id="build-project" class="section level4">
+<h4><span class="header-section-number">3.1.3.2</span> Build Project</h4>
+<p>In the <code>Console</code> tab:</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">wflow_build</span>()</code></pre>
+<ol style="list-style-type: decimal">
+<li>What does <code>wflow_build()</code> do?
+<ul>
+<li>Builds all the R Markdown files in analysis and saves their HTML in docs</li>
+<li>Displays the website</li>
+</ul></li>
+</ol>
+<p>Your website should like similar to the image of mine shown below (except with a Publish tab instead of a Dates tab)</p>
+<p><img src="images/Workflow_Photos/sample_wf.png" width="90%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="view-project" class="section level4">
+<h4><span class="header-section-number">3.1.3.3</span> View Project</h4>
+<p>At any time you can view the current site on your local machine by typing in the <code>Console</code> tab:</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">wflow_view</span>()</code></pre>
+</div>
+<div id="publish-website" class="section level4">
+<h4><span class="header-section-number">3.1.3.4</span> Publish Website</h4>
+<p>Currently, our project is simply an HTML file stored on our laptop, publishing the website will make it available online.</p>
+<p>In the <code>Console</code> tab:</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">wflow_status</span>()</code></pre>
+<p>This allows you to view which files are published or unpublished currently.</p>
+<p>Now we want to publish our page the command to do so takes three parts</p>
+<ol style="list-style-type: decimal">
+<li>c - Commit</li>
+<li>(“analysis/index.Rmd”, “analysis/about.Rmd”, “analysis/license.Rmd”), - A character vector of the Rmd files you want published
+<ul>
+<li>It may be easier to place (&quot;*.Rmd&quot;) here to use all the files</li>
+</ul></li>
+<li>“Publish the initial files” - A commit message to be posted</li>
+</ol>
+<p>Overall, <code>wflow_publish</code> is a quick and error-free way for us to commit and push all of our Rmd files to GitLab at once.</p>
+<p>In the <code>Console</code> tab:</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">wflow_publish</span>(<span class="kw">c</span>(<span class="st">&quot;analysis/index.Rmd&quot;</span>, <span class="st">&quot;analysis/about.Rmd&quot;</span>, <span class="st">&quot;analysis/license.Rmd&quot;</span>), <span class="st">&quot;Publish the initial files for PROJECT_NAME&quot;</span>)</code></pre>
+</div>
+</div>
+<div id="connecting-to-gitlab-1" class="section level3">
+<h3><span class="header-section-number">3.1.4</span> Connecting to GitLab</h3>
+<div id="creating-a-remote-repository-on-gitlab" class="section level4">
+<h4><span class="header-section-number">3.1.4.1</span> Creating a remote repository on GitLab</h4>
+<ol style="list-style-type: decimal">
+<li>Log in to GitLab and click <code>New Project</code></li>
+<li>The project name in GitLab should the same name as the project in RStudio: PROJECT_NAME</li>
+<li>Make sure to save it as Internal so everyone at Agios can see it</li>
+</ol>
+</div>
+<div id="not-working-do-you-have-an-ssh-key" class="section level4">
+<h4><span class="header-section-number">3.1.4.2</span> Not working? Do you have an ssh key? **</h4>
+<p>In order for you to successfully connect to GitLab you need to have an ssh key linked to your GitLab.</p>
+<p>There is a simple guide to doing this on GitLab <a href="http://ceres.agios.com/help/ssh/README#generating-a-new-ssh-key-pair">here</a> so you can simply follow along below and click the link if you get lost.</p>
+<ol style="list-style-type: decimal">
+<li>Automatically copy your public key to the clipboard using one of the following commands:</li>
+</ol>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="co"># macOS:</span>
+<span class="ex">pbcopy</span> <span class="op">&lt;</span> ~/.ssh/id_ed25519.pub
+<span class="co"># WSL / GNU/Linux (requires the xclip package):</span>
+<span class="ex">xclip</span> -sel clip <span class="op">&lt;</span> ~/.ssh/id_ed25519.pub
+<span class="co">#Git Bash on Windows:</span>
+<span class="fu">cat</span> ~/.ssh/id_ed25519.pub <span class="kw">|</span> <span class="ex">clip</span></code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li>Go back into your GitLab account and click on <code>Settings</code> then <code>SSH Keys</code> and simply paste and name your key there.</li>
+</ol>
+<p>** Only need to do this once per laptop or GitLab account</p>
+</div>
+<div id="connect-rstudio-and-gitlab" class="section level4">
+<h4><span class="header-section-number">3.1.4.3</span> Connect RStudio and GitLab</h4>
+<ol style="list-style-type: decimal">
+<li>Go to RStudio, in <code>Console</code> tab:</li>
+</ol>
+<pre class="sourceCode r"><code class="sourceCode r"> <span class="kw">wflow_use_gitlab</span>(<span class="dt">username =</span> <span class="st">&quot;first.last&quot;</span>, <span class="dt">repository =</span> <span class="st">&quot;PROJECT_NAME&quot;</span>, <span class="dt">domain =</span> <span class="st">&quot;ceres.agios.com&quot;</span>)</code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li>Go back to GitLab and scroll down to the <code>push an existing Git repository</code> option
+<ul>
+<li>Copy everything in the box on GitLab besides the first line which <code>cd</code> into the repo for the user, there is an example below of what this should look like.</li>
+</ul></li>
+</ol>
+<pre class="sourceCode r"><code class="sourceCode r">git remote rename origin old<span class="op">-</span>origin
+git remote add origin git<span class="op">@</span>ceres.agios.com<span class="op">:</span>Caitlin.Guccione<span class="op">/</span>test<span class="op">-</span>.git
+git push <span class="op">-</span>u origin <span class="op">--</span>all
+git push <span class="op">-</span>u origin <span class="op">--</span>tags</code></pre>
+<ol start="3" style="list-style-type: decimal">
+<li>Go back into RStudio and in the <code>Terminal</code> tab
+<ul>
+<li>Make sure you are in the PROJECT_NAME repo</li>
+<li>Paste the above commands we got from GitLab</li>
+</ul></li>
+<li>Return to GitLab to ensure your entire project exists there</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:a3"></span>
+<img src="images/Workflow_Photos/screen_shot.png" alt="Example GitLab and Workflowr Connection" width="100%" />
+<p class="caption">
+Figure 3.1: Example GitLab and Workflowr Connection
+</p>
+</div>
+</div>
+</div>
+<div id="adding-new-files" class="section level3">
+<h3><span class="header-section-number">3.1.5</span> Adding New Files</h3>
+<div id="creating-new-files" class="section level4">
+<h4><span class="header-section-number">3.1.5.1</span> Creating New Files</h4>
+<p>Make sure you are inside the PROJECT_NAME project inside RStudio</p>
+<p>In <code>Console</code> tab type:</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">wflow_open</span>(<span class="st">&quot;analysis/NEW_FILE.Rmd&quot;</span>)</code></pre>
+<ul>
+<li>This command creates a new Rmd file and then opens it for your convenience.</li>
+</ul>
+<p>If we now want to see the HTML version of our file then we have two options:</p>
+<ol style="list-style-type: decimal">
+<li>In <code>Console</code> tab type:</li>
+</ol>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">wflow_build</span>()</code></pre>
+<ul>
+<li>You can add specific files to this command or simply leave it empty</li>
+<li>This produces a small view of your website right on RStudio</li>
+</ul>
+<ol start="2" style="list-style-type: decimal">
+<li>Press the `Knit’ button in RStudio as shown below:</li>
+</ol>
+<p><img src="images/Workflow_Photos/knit_arrow.png" width="80%" style="display: block; margin: auto;" /></p>
+<ul>
+<li>This produces a large web version of your current HTML file</li>
+</ul>
+<p>These steps will simply change the HTML file local bu tin order to make this public and add it to GitLab we need to update our changes.</p>
+</div>
+<div id="update-your-changes" class="section level4">
+<h4><span class="header-section-number">3.1.5.2</span> Update your Changes</h4>
+<ol style="list-style-type: decimal">
+<li>Check the status to see what needs to be updated, in the <code>Console</code> tab,</li>
+</ol>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">wflow_status</span>()</code></pre>
+<p>This can also be done by looking at the red checks on the workflowr section of your live page as shown below:</p>
+<p><img src="images/Workflow_Photos/red_checks.png" width="90%" style="display: block; margin: auto;" /></p>
+<ol start="2" style="list-style-type: decimal">
+<li>Make the appropriate HTML files public and updated, in the <code>Console</code> tab,</li>
+</ol>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">wflow_publish</span>(<span class="kw">c</span>(<span class="st">&quot;analysis/index.Rmd&quot;</span>, <span class="st">&quot;analysis/NEW_FILE.Rmd&quot;</span>), <span class="st">&quot;Add my first file&quot;</span>)</code></pre>
+<ul>
+<li>This is the same format found on the <code>Publish Website</code> tab of this page and so you can customize it in the same way</li>
+</ul>
+<p>There is one exception to this and it’s when you want to make updates to the <code>_site.yml</code> file found in the <code>analysis</code> folder. This file controls the style on the top of every page of your website. In this case, you want to update all HTML files even though their Rmd files aren’t changed.</p>
+<p>In that case, use this,</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">wflow_publish</span>(<span class="st">&quot;analysis/_site.yml&quot;</span>, <span class="st">&quot;Change the theme&quot;</span>, <span class="dt">republish =</span> <span class="ot">TRUE</span>)</code></pre>
+<ol start="3" style="list-style-type: decimal">
+<li>Push the final changes to GitLab</li>
+</ol>
+<p>As we did previously in the <code>Publish Website</code>, in the <code>Terminal</code> tab,</p>
+<pre class="sourceCode r"><code class="sourceCode r">git push</code></pre>
+</div>
+<div id="adding-workflowr-to-new-file" class="section level4">
+<h4><span class="header-section-number">3.1.5.3</span> Adding Workflowr to New File</h4>
+<p>If you want the normal workflowr setup which is found on all the other pages, then replace the — part of the file with the following code:</p>
+<pre><code>            ---
+            title: &quot;Home&quot;
+            site: workflowr::wflow_site
+            output:
+              workflowr::wflow_html:
+                toc: false
+            editor_options:
+              chunk_output_type: console
+      ---</code></pre>
+</div>
+</div>
+<div id="styling-the-webpage" class="section level3">
+<h3><span class="header-section-number">3.1.6</span> Styling the Webpage</h3>
+<div id="helpful-links" class="section level4">
+<h4><span class="header-section-number">3.1.6.1</span> Helpful Links</h4>
+<p>If you already have an idea of what you would like to change, below are a few very helpful resources filled with information:</p>
+<ul>
+<li>This resource is a great place to start because it has all basics of Rmd syntax and I used it as a cheat sheet along the way.
+<ul>
+<li><a href="https://rmarkdown.rstudio.com/authoring_basics.html">Rmd Cheat Sheet</a></li>
+</ul></li>
+<li>This is an entire book all about Rmd and how to use it. I found it rather lengthy but very helpful.
+<ul>
+<li><a href="https://bookdown.org/yihui/rmarkdown/html-document.html#appearance_and_style">Rmd Thorough Guide</a></li>
+</ul></li>
+<li>If something isn’t quite working right you may have run into a workflowr issue in which cause their FAQ’s page is helpful.
+<ul>
+<li><a href="https://jdblischak.github.io/workflowr/articles/wflow-05-faq.html">Workflor FAQ’s</a></li>
+</ul></li>
+</ul>
+</div>
+<div id="changing-the-theme" class="section level4">
+<h4><span class="header-section-number">3.1.6.2</span> Changing the Theme</h4>
+<p>Changing the theme modifies the overall appearance of the webpage is a quick and easy way to spice up the page.</p>
+<ol style="list-style-type: decimal">
+<li>Go into your <code>analysis/_site.yml</code> file</li>
+<li>Underneath <code>ouput</code> add <code>theme = cerulean</code> as shown below:
+<ul>
+<li>The cerulean theme matches Agios colors</li>
+</ul></li>
+</ol>
+<pre class="sourceCode r"><code class="sourceCode r">output<span class="op">:</span>
+<span class="st">    </span>theme<span class="op">:</span><span class="st"> </span>cerulean</code></pre>
+<ol start="3" style="list-style-type: decimal">
+<li>Choose your theme
+<ul>
+<li>The following themes are available : “default”, “cerulean”, “journal”, “flatly”, “darkly”, “readable”, “spacelab”, “united”, “cosmo”, “lumen”, “paper”, “sandstone”, “simplex”, “yeti”</li>
+<li>You can view how they look here: <a href="https://bootswatch.com/">Themes</a></li>
+</ul></li>
+<li>Preview your theme using,</li>
+</ol>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">wflow_build</span>()</code></pre>
+<ol start="5" style="list-style-type: decimal">
+<li>Update your website by running,
+<ul>
+<li>This will rebuild every HTML file even if their corresponding Rmd file hasn’t been updated</li>
+</ul></li>
+</ol>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">wflow_publish</span>(<span class="st">&quot;analysis/_site.yml&quot;</span>, <span class="st">&quot;Change the theme&quot;</span>, <span class="dt">republish =</span> <span class="ot">TRUE</span>)</code></pre>
+<p>The following website will also walk you through changing the theme: <a href="https://jdblischak.github.io/workflowr/articles/wflow-02-customization.html#changing-the-theme">Themes Overview</a></p>
+</div>
+<div id="adding-photos" class="section level4">
+<h4><span class="header-section-number">3.1.6.3</span> Adding Photos</h4>
+<p>Although this may seem like a simple task, it is a bit challenging since we are using Workflowr</p>
+<ol style="list-style-type: decimal">
+<li>Create a <code>photos</code> folder inside the <code>docs</code> folder and add your photo there:</li>
+</ol>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">dir.create</span>(<span class="st">&quot;docs/photos&quot;</span>)</code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li>Include the following command wherever you want your graphic to appear:</li>
+</ol>
+<p><img src="images/Workflow_Photos/photoExample.png" width="50%" style="display: block; margin: auto auto auto 0;" /></p>
+<ol start="3" style="list-style-type: decimal">
+<li>View the images on the webpage</li>
+</ol>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">wflow_build</span>()</code></pre>
+<ol start="4" style="list-style-type: decimal">
+<li>Add to GitLab
+<ul>
+<li>We need to push the actual photo to GitLab using <code>wflow_git_commit</code> and then we can use <code>wflow_publish</code> to automatically push the rest of the files to GitLab</li>
+</ul></li>
+</ol>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">wflow_git_commit</span>(<span class="st">&quot;docs/assets/external.png&quot;</span>, <span class="st">&quot;Add external image of ...&quot;</span>)
+<span class="kw">wflow_publish</span>()</code></pre>
+<!-- End of Caitlin Workflowr-->
+</div>
+</div>
+</div>
+<div id="set-up-workflow-and-executing" class="section level2">
+<h2><span class="header-section-number">3.2</span> Set Up Workflow and Executing</h2>
+<div id="create-a-folder-for-your-newproject" class="section level3">
+<h3><span class="header-section-number">3.2.1</span> Create a folder for your <em>newproject</em></h3>
+<p>Come up with a project stucture you like and stick with it.</p>
+<div id="copy-from-a-previously-created-template-folder" class="section level4">
+<h4><span class="header-section-number">3.2.1.1</span> Copy from a previously created template folder</h4>
+<p>Use <code>cp -r project_template newproject</code>, where <code>project_template</code> has structure:</p>
+<p><img src="images/projectstructure.png" width="1000" /></p>
+</div>
+<div id="use-a-bash-script" class="section level4">
+<h4><span class="header-section-number">3.2.1.2</span> Use a <code>bash</code> script</h4>
+<p>Call <code>./setup_project.sh newproject</code>, where <code>setup_project.sh</code> is:</p>
+<pre><code>#!/bin/bash
+
+NEW=$1
+
+## Set up folder structure
+mkdir $NEW
+cd $NEW
+
+touch README
+
+mkdir data
+mkdir data/raw
+mkdir data/raw/pheno
+mkdir data/interim
+mkdir data/processed
+mkdir data/processed/pheno
+touch data/raw/MAKE_EVERY_FILE_READ_ONLY
+
+mkdir results
+mkdir results/reports
+mkdir results/notebooks
+mkdir results/figures
+
+mkdir sub
+mkdir sub/logs
+mkdir sub/qsub
+
+mkdir src
+touch src/functions.R
+</code></pre>
+<div class="alert alert-info">
+<p><strong>Don’t forget!</strong> <br>
+- Fill project README <br>
+- Adapt structure to project needs <br>
+- Exclude data and other large files from git using <code>.gitignore</code> (see next section)<br>
+- Make files in <code>data/raw</code> read-only with <code>chmod -w</code></p>
+</div>
+<div class="alert alert-warning">
+<p><strong>Project organization ideas:</strong> <br>
+<a href="http://projecttemplate.net/getting_started.html" class="uri">http://projecttemplate.net/getting_started.html</a> <br>
+<a href=https://peerj.com/preprints/3192.pdf>Packaging data analytical work reproducibly using R (and friends)</a><br>
+<a href=https://community.rstudio.com/clicks/track?url=https%3A%2F%2Fmaraaverick.rbind.io%2F2017%2F09%2Fr-workflow-fun%2F&post_id=8980&topic_id=1995>R workflow fun</a><br>
+<a href=https://drivendata.github.io/cookiecutter-data-science/>Cookiecutter Data Science</a><br></p>
+</div>
+</div>
+</div>
+<div id="set-up-a-repository-for-your-code-on-agios-secure-gitlab" class="section level3">
+<h3><span class="header-section-number">3.2.2</span> Set up a repository for your code on Agios’ secure GitLab</h3>
+<p>Create a new project at <a href>http://ceres.agios.com</a> (Mark P. can help)</p>
+</div>
+<div id="set-up-a-repository-for-your-code-locally-and-link-to-gitlab" class="section level3">
+<h3><span class="header-section-number">3.2.3</span> Set up a repository for your code locally and link to GitLab</h3>
+<p>In your <em>newproject</em> folder on command line execute (modify user name):</p>
+<pre><code>git init
+git add .
+git commit -am 'initial commit'
+git remote add origin git@ceres.agios.com:User.Name/newproject.git
+git push -u origin master 
+</code></pre>
+</div>
+<div id="set-up-an-r-project-in-rstudio" class="section level3">
+<h3><span class="header-section-number">3.2.4</span> Set up an R project in RStudio</h3>
+<p>Choose Existing Directory (<em>newproject</em>) <br></p>
+<p><img src="images/newproject0.png" width="122" /><img src="images/newproject.png" width="270" /></p>
+</div>
+<div id="analysis-in-r-and-rstudio" class="section level3">
+<h3><span class="header-section-number">3.2.5</span> Analysis in R and RStudio</h3>
+<p><strong>Data:</strong></p>
+<ul>
+<li>Raw data:
+<ul>
+<li>If accessed from the web, include url, description, and date accessed in README</li>
+</ul></li>
+<li>Processed:
+<ul>
+<li>Processed data should be named so it is easy to see which script generated the data
+<ul>
+<li>Can add file descriptions to <code>filename.README</code> and place processing script in the same directory as data (works well for preprocessing steps, like alignments, etc)</li>
+</ul></li>
+<li>Processed data should be <a href=http://vita.had.co.nz/papers/tidy-data.pdf>tidy</a></li>
+</ul></li>
+</ul>
+<p><strong>Code:</strong></p>
+<ul>
+<li>Place (almost) all intermediate scripts in <code>newproject/src/</code></li>
+<li>Any chunks of code frequently reused in the analysis should be converted into functions, saved in <code>newproject/src/functions.R</code>, and sourced in scripts, notebooks and reports.<br />
+</li>
+<li>Use <a href=https://google.github.io/styleguide/Rguide.xml>Google’s R Style Guide</a> or <a href=http://style.tidyverse.org>The tidyverse styleguide</a> to format your code and make it easier to read (if need be run code through <a href=https://yihui.name/formatr/>formatR</a>)</li>
+</ul>
+<p><strong>Figures:</strong></p>
+<ul>
+<li>Exploratory:
+<ul>
+<li>Don’t have to be pretty</li>
+<li>Can be embedded in report / notebook</li>
+</ul></li>
+<li>Final:
+<ul>
+<li>Should be polished and saved in <code>newproject/results/figures/</code></li>
+</ul></li>
+</ul>
+<p><strong>Scripts:</strong></p>
+<ul>
+<li>Raw:
+<ul>
+<li>May be less commented (but comments help you!)</li>
+<li>May be multiple versions</li>
+<li>May include analyses that are later discarded</li>
+</ul></li>
+<li>Final:
+<ul>
+<li>Clearly commented</li>
+<li>Small comments liberally - what, when, why, how</li>
+<li>Bigger commented blocks for whole sections</li>
+<li>Include processing details</li>
+<li>Only analyses that appear in the final write-up</li>
+</ul></li>
+</ul>
+<p><strong>Notebooks and reports:</strong></p>
+<ul>
+<li><p>R markdown files can be used to generate reproducible reports</p></li>
+<li><p>Text and R code are integrated</p></li>
+<li>Notebooks:
+<ul>
+<li>intermediate</li>
+<li>may use one per day or one per subanalysis</li>
+<li>documents all atempts</li>
+</ul></li>
+<li>Reports:
+<ul>
+<li>final methods and results only</li>
+<li>good for sharing</li>
+</ul></li>
+</ul>
+<p>Adapted from: <a href=https://d18ky98rnyall9.cloudfront.net/_675d65293ef671c7dc754b3bd2779da6_Checklist.pdf?Expires=1525392000&Signature=XC-8TNzRrnwFEL5l6xadO9zD1jJxsLjfTwGovr1F6W~lWqZt0B2irE7zHKdQ2kJuQIF650WNaCPJzvnW83E-OaUDaCk4xIhhjdBVwMrJlgDGd3J8sOX2KlL8XRiZTdw3wbXa-C4JZ1r9tpuURHsZyleHTlorJ0ZGWN4VhuBtPd8_&Key-Pair-Id=APKAJLTNE6QMUY6HBC5A>Reproducible Research at Coursera</a></p>
+</div>
+<div id="version-control-in-git-and-gitlab" class="section level3">
+<h3><span class="header-section-number">3.2.6</span> Version control in git and GitLab</h3>
+<p>Adopt a branching workflow appropriate for the project and team size, and stick to it.</p>
+<p><a href="gitforsmallteams">gitforsmallteams</a></p>
+<div class="alert alert-info">
+<p>Reprinted from: <a href=http://www.joslynesser.com/blog/archives/2010/09/06/git-workflow-for-small-teams/>Git workflow for small teams</a>. Link currently is password protected.</p>
+</div>
+<div class="alert alert-warning">
+<p><strong><code>git</code> and <code>git-workflow</code> resources:</strong><br>
+<a href=https://try.github.io/levels/1/challenges/1>Learn git</a> <br>
+<a href=http://nvie.com/posts/a-successful-git-branching-model/>Git branching model</a> <br>
+<a href=https://datasift.github.io/gitflow/IntroducingGitFlow.html>GitFlow</a></p>
+</div>
+</div>
+<div id="keeping-track-of-enviroment" class="section level3">
+<h3><span class="header-section-number">3.2.7</span> Keeping track of enviroment</h3>
+<p>Use <code>devtools::session_info()</code></p>
+<pre><code>> devtools::session_info()
+Session info -----------------------------------------------------------------------------------------------------------------
+ setting  value                       
+ version  R version 3.4.2 (2017-09-28)
+ system   x86_64, linux-gnu           
+ ui       RStudio (99.9.9)            
+ language (EN)                        
+ collate  en_US.UTF-8                 
+ tz       America/New_York            
+ date     2018-05-02                  
+
+Packages ---------------------------------------------------------------------------------------------------------------------
+ package   * version date       source        
+ backports   1.1.1   2017-09-25 CRAN (R 3.4.2)
+ base      * 3.4.2   2017-10-05 local         
+ compiler    3.4.2   2017-10-05 local 
+ [...]
+</code></pre>
+<p>or <code>sessionInfo()</code></p>
+<pre><code>> sessionInfo()
+R version 3.4.2 (2017-09-28)
+Platform: x86_64-pc-linux-gnu (64-bit)
+Running under: Ubuntu precise (12.04.4 LTS)
+
+Matrix products: default
+BLAS: /data2/software/R/3.4.2/lib/R/lib/libRblas.so
+LAPACK: /data2/software/R/3.4.2/lib/R/lib/libRlapack.so
+
+locale:
+ [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C               LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8     LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8    LC_PAPER=en_US.UTF-8       LC_NAME=C                 
+ [9] LC_ADDRESS=C               LC_TELEPHONE=C             LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+loaded via a namespace (and not attached):
+ [1] Rcpp_0.12.13    digest_0.6.12   withr_2.0.0     rprojroot_1.2   backports_1.1.1 magrittr_1.5    evaluate_0.10.1 stringi_1.1.5   rstudioapi_0.7  rmarkdown_1.6   devtools_1.13.3 tools_3.4.2     stringr_1.2.0   yaml_2.1.14     compiler_3.4.2 
+[16] memoise_1.1.0   htmltools_0.3.6 knitr_1.17   
+</code></pre>
+<p>or <code>docker</code> with <code>rrtools</code></p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="bestpractices.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="toolbox.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/02-projectworkflows.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": ["bookdown-demo.pdf", "bookdown-demo.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

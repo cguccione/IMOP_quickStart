@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="og:title" content="Chapter 2 Best practices | Informatics team manual of procedures" />
+<meta property="og:type" content="book" />
+
+
+<meta property="og:description" content="This is a manual of operations for the Agios Informatics team. Its puspose is to provide a resource on best practices, aid in setting up effective and reproducible project workflows, and promote learning and sharing of ideas." />
+
+
+<meta name="author" content="Ania Tassinari" />
+
+<meta name="date" content="2019-06-27" />
+
+
+<meta name="description" content="This is a manual of operations for the Agios Informatics team. Its puspose is to provide a resource on best practices, aid in setting up effective and reproducible project workflows, and promote learning and sharing of ideas.">
+
+<title>Chapter 2 Best practices | Informatics team manual of procedures</title>
+
+<script src="libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="libs/bootstrap-3.3.5/css/spacelab.min.css" rel="stylesheet" />
+<script src="libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="libs/navigation-1.1/tabsets.js"></script>
+
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container-fluid main-container">
+
+
+<div class="row">
+<div class="col-sm-12">
+<div id="TOC">
+<ul>
+<li><a href="index.html#about"><span class="toc-section-number">1</span> About</a></li>
+<li class="has-sub"><a href="2-bestpractices.html#bestpractices"><span class="toc-section-number">2</span> Best practices</a><ul>
+<li class="has-sub"><a href="2-1-reproducible-research.html#reproducible-research"><span class="toc-section-number">2.1</span> Reproducible research</a><ul>
+<li><a href="2-1-reproducible-research.html#purpose"><span class="toc-section-number">2.1.1</span> Purpose</a></li>
+<li><a href="2-1-reproducible-research.html#dos-and-donts-of-reproducible-research"><span class="toc-section-number">2.1.2</span> DO’s and DON’T’s of reproducible research</a></li>
+</ul></li>
+<li><a href="2-2-version-control.html#version-control"><span class="toc-section-number">2.2</span> Version control</a></li>
+<li class="has-sub"><a href="2-3-code-guidelines.html#code-guidelines"><span class="toc-section-number">2.3</span> Code guidelines</a><ul>
+<li><a href="2-3-code-guidelines.html#r"><span class="toc-section-number">2.3.1</span> R</a></li>
+</ul></li>
+</ul></li>
+<li class="has-sub"><a href="3-workflows.html#workflows"><span class="toc-section-number">3</span> Project workflows</a><ul>
+<li class="has-sub"><a href="3-1-using-workflowr.html#using-workflowr"><span class="toc-section-number">3.1</span> Using Workflowr</a><ul>
+<li><a href="3-1-using-workflowr.html#quick-start"><span class="toc-section-number">3.1.1</span> Quick Start</a></li>
+<li><a href="3-1-using-workflowr.html#installation"><span class="toc-section-number">3.1.2</span> Installation</a></li>
+<li><a href="3-1-using-workflowr.html#create-project"><span class="toc-section-number">3.1.3</span> Create Project</a></li>
+<li><a href="3-1-using-workflowr.html#connecting-to-gitlab-1"><span class="toc-section-number">3.1.4</span> Connecting to GitLab</a></li>
+<li><a href="3-1-using-workflowr.html#adding-new-files"><span class="toc-section-number">3.1.5</span> Adding New Files</a></li>
+<li><a href="3-1-using-workflowr.html#styling-the-webpage"><span class="toc-section-number">3.1.6</span> Styling the Webpage</a></li>
+</ul></li>
+<li class="has-sub"><a href="3-2-set-up-workflow-and-executing.html#set-up-workflow-and-executing"><span class="toc-section-number">3.2</span> Set Up Workflow and Executing</a><ul>
+<li><a href="3-2-set-up-workflow-and-executing.html#create-a-folder-for-your-newproject"><span class="toc-section-number">3.2.1</span> Create a folder for your <em>newproject</em></a></li>
+<li><a href="3-2-set-up-workflow-and-executing.html#set-up-a-repository-for-your-code-on-agios-secure-gitlab"><span class="toc-section-number">3.2.2</span> Set up a repository for your code on Agios’ secure GitLab</a></li>
+<li><a href="3-2-set-up-workflow-and-executing.html#set-up-a-repository-for-your-code-locally-and-link-to-gitlab"><span class="toc-section-number">3.2.3</span> Set up a repository for your code locally and link to GitLab</a></li>
+<li><a href="3-2-set-up-workflow-and-executing.html#set-up-an-r-project-in-rstudio"><span class="toc-section-number">3.2.4</span> Set up an R project in RStudio</a></li>
+<li><a href="3-2-set-up-workflow-and-executing.html#analysis-in-r-and-rstudio"><span class="toc-section-number">3.2.5</span> Analysis in R and RStudio</a></li>
+<li><a href="3-2-set-up-workflow-and-executing.html#version-control-in-git-and-gitlab"><span class="toc-section-number">3.2.6</span> Version control in git and GitLab</a></li>
+<li><a href="3-2-set-up-workflow-and-executing.html#keeping-track-of-enviroment"><span class="toc-section-number">3.2.7</span> Keeping track of enviroment</a></li>
+</ul></li>
+</ul></li>
+<li class="has-sub"><a href="4-toolbox.html#toolbox"><span class="toc-section-number">4</span> Toolbox</a><ul>
+<li class="has-sub"><a href="4-1-command-line-tools.html#command-line-tools"><span class="toc-section-number">4.1</span> Command Line Tools</a><ul>
+<li><a href="4-1-command-line-tools.html#bioinformatics"><span class="toc-section-number">4.1.1</span> Bioinformatics</a></li>
+<li><a href="4-1-command-line-tools.html#docker"><span class="toc-section-number">4.1.2</span> Docker</a></li>
+<li><a href="4-1-command-line-tools.html#file-system"><span class="toc-section-number">4.1.3</span> File system</a></li>
+<li><a href="4-1-command-line-tools.html#sun-grid-engine"><span class="toc-section-number">4.1.4</span> Sun Grid Engine</a></li>
+<li><a href="4-1-command-line-tools.html#vim"><span class="toc-section-number">4.1.5</span> vim</a></li>
+</ul></li>
+<li class="has-sub"><a href="4-2-r-1.html#r-1"><span class="toc-section-number">4.2</span> R</a><ul>
+<li><a href="4-2-r-1.html#heatmaps"><span class="toc-section-number">4.2.1</span> Heatmaps</a></li>
+<li><a href="4-2-r-1.html#addition"><span class="toc-section-number">4.2.2</span> Addition</a></li>
+</ul></li>
+<li><a href="4-3-python.html#python"><span class="toc-section-number">4.3</span> python</a></li>
+<li><a href="4-4-perl.html#perl"><span class="toc-section-number">4.4</span> perl</a></li>
+</ul></li>
+<li><a href="references.html#references">References</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-12">
+<div id="bestpractices" class="section level1">
+<h1><span class="header-section-number">Chapter 2</span> Best practices</h1> 
+</div>
+<p style="text-align: center;">
+<a href="index.html"><button class="btn btn-default">Previous</button></a>
+<a href="2-1-reproducible-research.html"><button class="btn btn-default">Next</button></a>
+</p>
+</div>
+</div>
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+$(document).ready(function () {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+});
+
+</script>
+
+</body>
+</html>

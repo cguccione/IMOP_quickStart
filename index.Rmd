@@ -1,0 +1,72 @@
+--- 
+title: "IMOP: Workflowr Quick Start"
+author: "Ania Tassinari & Caitlin Guccione"
+date: "Summer 2019"
+geometry: margin=2cm
+site: bookdown::bookdown_site
+#output: bookdown::gitbook
+bookdown::gitbook:
+  config:
+    fontsettings:
+      theme: Night
+documentclass: article
+classoption: openany
+bibliography: [book.bib, packages.bib]
+biblio-style: apalike
+link-citations: yes
+split_by: "chapter+number"
+always_allow_html: yes
+new_session: yes
+urlcolor: blue
+---
+
+# Set Up 
+
+In the `Console` tab of RStudio make sure you are in `(None)` project: 
+
+```{r setUp, eval=FALSE }
+install.packages("workflowr")
+library("workflowr")
+wflow_git_config(user.name = "First Last", user.email = "first.last@agios.com")
+```
+
+# Creating Projects
+
+In the `Console` tab, 
+
+```{r createProj, create, eval=FALSE }
+wflow_start("PROJECT")
+wflow_build()
+wflow_publish(c("analysis/*.Rmd"), "Publish the initial files for PROJECT")
+```
+
+# Connecting to GitLab
+
+In the `Console` tab, 
+
+```{r git, eval=FALSE}
+wflow_use_gitlab(username = "first.last", repository = "PROJECT", domain = "git.agios.local")
+```
+
+Go to your Agios GitLab and do the following:
+
++ Create a project in GitLab with the same name as the project in RStudio
++ Select all the text in the `push an existing Git repository option`
++ Make sure you are in PROJECT directory and paste into `Terminal`
+
+# Creating a New File
+
+In the `Console` tab, 
+
+```{r newFile, eval=FALSE}
+wflow_open("analysis/NEW_FILE.Rmd")
+wflow_build()
+wflow_publish(c("analysis/*.Rmd"), "Publish the file NEW_FILE")
+```
+
+In the `Terminal` tab, 
+```{r gitPush, eval=FALSE}
+git push
+```
+
+
