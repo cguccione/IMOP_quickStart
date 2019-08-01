@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>IMOP: Workflowr Quick Start</title>
-  <meta name="description" content="IMOP: Workflowr Quick Start" />
+  <title>3 Connecting to GitLab | IMOP: Workflowr Quick Start</title>
+  <meta name="description" content="3 Connecting to GitLab | IMOP: Workflowr Quick Start" />
   <meta name="generator" content="bookdown 0.12 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="IMOP: Workflowr Quick Start" />
+  <meta property="og:title" content="3 Connecting to GitLab | IMOP: Workflowr Quick Start" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="IMOP: Workflowr Quick Start" />
+  <meta name="twitter:title" content="3 Connecting to GitLab | IMOP: Workflowr Quick Start" />
   
   
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="creating-projects.html">
+<link rel="prev" href="creating-projects.html">
+<link rel="next" href="creating-a-new-file.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -153,25 +153,24 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">IMOP: Workflowr Quick Start</h1>
-<p class="author"><em>Ania Tassinari &amp; Caitlin Guccione</em></p>
-<p class="date"><em>Summer 2019</em></p>
-</div>
-<div id="set-up" class="section level1">
-<h1><span class="header-section-number">1</span> Set Up</h1>
-<p>In the <code>Console</code> tab of RStudio make sure you are in <code>(None)</code> project:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="index.html#cb1-1"></a><span class="kw">install.packages</span>(<span class="st">&quot;workflowr&quot;</span>)</span>
-<span id="cb1-2"><a href="index.html#cb1-2"></a><span class="kw">library</span>(<span class="st">&quot;workflowr&quot;</span>)</span>
-<span id="cb1-3"><a href="index.html#cb1-3"></a><span class="kw">wflow_git_config</span>(<span class="dt">user.name =</span> <span class="st">&quot;First Last&quot;</span>, <span class="dt">user.email =</span> <span class="st">&quot;first.last@agios.com&quot;</span>)</span></code></pre></div>
+<div id="connecting-to-gitlab" class="section level1">
+<h1><span class="header-section-number">3</span> Connecting to GitLab</h1>
+<p>In the <code>Console</code> tab,</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="connecting-to-gitlab.html#cb3-1"></a><span class="kw">wflow_use_gitlab</span>(<span class="dt">username =</span> <span class="st">&quot;first.last&quot;</span>, <span class="dt">repository =</span> <span class="st">&quot;PROJECT&quot;</span>, <span class="dt">domain =</span> <span class="st">&quot;git.agios.local&quot;</span>)</span></code></pre></div>
+<p>Go to your Agios GitLab and do the following:</p>
+<ul>
+<li>Create a project in GitLab with the same name as the project in RStudio</li>
+<li>Select all the text in the <code>push an existing Git repository option</code></li>
+<li>Make sure you are in PROJECT directory and paste into <code>Terminal</code></li>
+</ul>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-<a href="creating-projects.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="creating-projects.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="creating-a-new-file.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
