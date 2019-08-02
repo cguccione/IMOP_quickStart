@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019) (preloaded format=xelatex 2019.8.1)  1 AUG 2019 12:12
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019) (preloaded format=xelatex 2019.8.1)  1 AUG 2019 16:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -844,23 +844,23 @@ LaTeX Info: Redefining \nameref on input line 135.
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
 (Font)              Font shape `TU/lmtt/b/n' tried instead on input line 145.
 No file IMOP_quick.bbl.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 211.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 212.
 [1
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 211.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 212.
 (./IMOP_quick.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 211.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 211.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 212.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 212.
 Package rerunfilecheck Info: File `IMOP_quick.out' has not changed.
-(rerunfilecheck)             Checksum: 3B49739E40D185F6EA0550900A6A2BAB.
+(rerunfilecheck)             Checksum: 0F528E784C5415CFD6B94A62D2DCBECC.
  ) 
 Here is how much of TeX's memory you used:
- 23605 strings out of 494894
- 442447 string characters out of 6173844
- 536604 words of memory out of 5000000
- 27374 multiletter control sequences out of 15000+600000
- 532778 words of font info for 35 fonts, out of 8000000 for 9000
+ 23613 strings out of 494894
+ 442626 string characters out of 6173844
+ 538738 words of memory out of 5000000
+ 27379 multiletter control sequences out of 15000+600000
+ 532794 words of font info for 37 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  46i,5n,68p,807b,446s stack positions out of 5000i,500n,10000p,200000b,80000s
 
