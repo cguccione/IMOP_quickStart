@@ -34,7 +34,7 @@
             breaklinks=true}
 \urlstyle{same}  % don't use monospace font for urls
 \usepackage{natbib}
-\bibliographystyle{apalike}
+\bibliographystyle{plainnat}
 \usepackage{color}
 \usepackage{fancyvrb}
 \newcommand{\VerbBar}{|}
@@ -143,7 +143,7 @@ It is ideal to do this setup in RStudio, but any platform of R will work:
 \begin{Shaded}
 \begin{Highlighting}[]
 \KeywordTok{install.packages}\NormalTok{(}\StringTok{"workflowr"}\NormalTok{)}
-\KeywordTok{library}\NormalTok{(}\StringTok{"workflowr"}\NormalTok{)}
+\KeywordTok{library}\NormalTok{(}\StringTok{"workflowr"}\NormalTok{) }\CommentTok{# Loads the workflowr package}
 \KeywordTok{wflow_git_config}\NormalTok{(}\DataTypeTok{user.name =} \StringTok{"First Last"}\NormalTok{, }\DataTypeTok{user.email =} \StringTok{"first.last@agios.com"}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
@@ -156,8 +156,8 @@ It is ideal to do this setup in RStudio, but any platform of R will work:
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\KeywordTok{library}\NormalTok{(}\StringTok{"workflowr"}\NormalTok{) }\CommentTok{#Don't have to repeat if completed above}
-\KeywordTok{wflow_start}\NormalTok{(}\StringTok{"/path/PROJECT"}\NormalTok{) }\CommentTok{#Starts a workflowr project by creating folders & R project}
+\KeywordTok{library}\NormalTok{(}\StringTok{"workflowr"}\NormalTok{) }\CommentTok{# Don't have to repeat if completed above}
+\KeywordTok{wflow_start}\NormalTok{(}\StringTok{"/path/to/PROJECT"}\NormalTok{) }\CommentTok{# Sets up the folder structure, RStudio project & a .git repo}
 \end{Highlighting}
 \end{Shaded}
 
@@ -171,7 +171,7 @@ Go to your Agios GitLab and do the following:
 \item
   Create a project in GitLab with the same name as the project in RStudio
 \item
-  Go to your PROJECT directory in your \texttt{terminal} and paste the \texttt{Push\ an\ Existing\ Git\ Repository}
+  Go to your PROJECT directory in your \texttt{terminal} \& paste \texttt{Push\ an\ Existing\ Git\ Repository}
 \end{itemize}
 
 \hypertarget{complete-connection-in-r}{%
@@ -179,9 +179,13 @@ Go to your Agios GitLab and do the following:
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\KeywordTok{wflow_build}\NormalTok{() }\CommentTok{# Builds the Rmd files which builds the site allowing you to preview changes}
-\KeywordTok{wflow_publish}\NormalTok{(}\KeywordTok{c}\NormalTok{(}\StringTok{"analysis/*.Rmd"}\NormalTok{), }\StringTok{"Publish the initial files for PROJECT"}\NormalTok{) }\CommentTok{#Updates HTML files}
-\KeywordTok{wflow_use_gitlab}\NormalTok{(}\DataTypeTok{username =} \StringTok{"first.last"}\NormalTok{, }\DataTypeTok{repository =} \StringTok{"PROJECT"}\NormalTok{, }\DataTypeTok{domain =} \StringTok{"git.agios.local"}\NormalTok{)}
+\KeywordTok{wflow_build}\NormalTok{() }\CommentTok{# Builds Rmd files to HTML which creates the site allowing you to preview changes}
+\KeywordTok{wflow_publish}\NormalTok{(}\DataTypeTok{files=}\KeywordTok{c}\NormalTok{(}\StringTok{"analysis/*.Rmd"}\NormalTok{), }\DataTypeTok{message=}\StringTok{"Publish initial files"}\NormalTok{) }
+\CommentTok{# Builds Rmd files to HTML then, commits both Rmd & HTML files to GitLab with the above message}
+\CommentTok{# JavaScriptt/CSS files, which style the webpage are automatically commited as well}
+\OperatorTok{$}\StringTok{ }\NormalTok{git push }\CommentTok{# Pushes webpage to GitLab which saves a backup & allows others to view}
+\KeywordTok{wflow_use_gitlab}\NormalTok{(}\DataTypeTok{username =} \StringTok{"first.last"}\NormalTok{, }\DataTypeTok{domain =} \StringTok{"git.agios.local"}\NormalTok{)}
+\CommentTok{# Creates a link on the home page of your website to your source code on GitLab}
 \end{Highlighting}
 \end{Shaded}
 
@@ -190,23 +194,16 @@ Go to your Agios GitLab and do the following:
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\KeywordTok{wflow_open}\NormalTok{(}\StringTok{"analysis/NEW.Rmd"}\NormalTok{) }\CommentTok{#Creates and opens a new file}
-\KeywordTok{wflow_build}\NormalTok{() }\CommentTok{# If you are in RStudio you can also use the Knitr button here}
-\KeywordTok{wflow_publish}\NormalTok{(}\KeywordTok{c}\NormalTok{(}\StringTok{"analysis/NEW.Rmd"}\NormalTok{), }\StringTok{"Publish the file NEW"}\NormalTok{) }\CommentTok{#Updates HTML files}
-\end{Highlighting}
-\end{Shaded}
-
-Make sure you are in the correct project in your \texttt{terminal}, then run:
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{git push }\CommentTok{#Pushes your work to Git saving a backup and allowing others to view your updated page}
+\KeywordTok{wflow_open}\NormalTok{(}\StringTok{"analysis/NEW.Rmd"}\NormalTok{) }\CommentTok{# Creates & opens a new file}
+\KeywordTok{wflow_build}\NormalTok{() }\CommentTok{# Equivalent to RStudio's 'Knit' button}
+\KeywordTok{wflow_publish}\NormalTok{(}\DataTypeTok{files=}\KeywordTok{c}\NormalTok{(}\StringTok{"analysis/NEW.Rmd"}\NormalTok{), }\DataTypeTok{message =}\StringTok{"Publish the file NEW"}\NormalTok{) }
+\OperatorTok{$}\StringTok{ }\NormalTok{git push }\CommentTok{# Pushes webpage to Git which saves a backup & allows others to view}
 \end{Highlighting}
 \end{Shaded}
 
 Repeat this process anytime you want to update your page.
 
-\bibliography{book.bib,packages.bib}
+\$ Make sure you are in your \texttt{terminal} under the correct project before running the \texttt{git\ push} command
 
 
 \end{document}

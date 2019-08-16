@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>IMOP: Workflowr Quick Start</title>
-  <meta name="description" content="IMOP: Workflowr Quick Start" />
+  <title>3 Creating a New File &amp; Running Analysis | IMOP: Workflowr Quick Start</title>
+  <meta name="description" content="3 Creating a New File &amp; Running Analysis | IMOP: Workflowr Quick Start" />
   <meta name="generator" content="bookdown 0.12 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="IMOP: Workflowr Quick Start" />
+  <meta property="og:title" content="3 Creating a New File &amp; Running Analysis | IMOP: Workflowr Quick Start" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="IMOP: Workflowr Quick Start" />
+  <meta name="twitter:title" content="3 Creating a New File &amp; Running Analysis | IMOP: Workflowr Quick Start" />
   
   
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
+<link rel="prev" href="create-project.html">
 
-<link rel="next" href="create-project.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -156,25 +156,23 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">IMOP: Workflowr Quick Start</h1>
-<p class="author"><em>Ania Tassinari &amp; Caitlin Guccione</em></p>
-<p class="date"><em>Summer 2019</em></p>
-</div>
-<div id="set-up---once-per-machine" class="section level1">
-<h1><span class="header-section-number">1</span> Set Up - Once Per Machine</h1>
-<p>It is ideal to do this setup in RStudio, but any platform of R will work:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="index.html#cb1-1"></a><span class="kw">install.packages</span>(<span class="st">&quot;workflowr&quot;</span>)</span>
-<span id="cb1-2"><a href="index.html#cb1-2"></a><span class="kw">library</span>(<span class="st">&quot;workflowr&quot;</span>)</span>
-<span id="cb1-3"><a href="index.html#cb1-3"></a><span class="kw">wflow_git_config</span>(<span class="dt">user.name =</span> <span class="st">&quot;First Last&quot;</span>, <span class="dt">user.email =</span> <span class="st">&quot;first.last@agios.com&quot;</span>)</span></code></pre></div>
+<div id="creating-a-new-file-running-analysis" class="section level1">
+<h1><span class="header-section-number">3</span> Creating a New File &amp; Running Analysis</h1>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="creating-a-new-file-running-analysis.html#cb4-1"></a><span class="kw">wflow_open</span>(<span class="st">&quot;analysis/NEW.Rmd&quot;</span>) <span class="co"># Creates and opens a new file</span></span>
+<span id="cb4-2"><a href="creating-a-new-file-running-analysis.html#cb4-2"></a><span class="kw">wflow_build</span>() <span class="co"># Equivalent to RStudio&#39;s &#39;Knit&#39; button</span></span>
+<span id="cb4-3"><a href="creating-a-new-file-running-analysis.html#cb4-3"></a><span class="kw">wflow_publish</span>(<span class="dt">files=</span><span class="kw">c</span>(<span class="st">&quot;analysis/NEW.Rmd&quot;</span>), <span class="dt">message =</span><span class="st">&quot;Publish the file NEW&quot;</span>) </span>
+<span id="cb4-4"><a href="creating-a-new-file-running-analysis.html#cb4-4"></a>git push<span class="op">*</span><span class="st"> </span><span class="co"># Pushes webpage to Git which saves a backup and allows others to view</span></span></code></pre></div>
+<p>*Make sure you are in your terminal under the correct project before running the <code>git push</code> command</p>
+<p>Repeat this process anytime you want to update your page.</p>
+
 </div>
             </section>
 
           </div>
         </div>
       </div>
+<a href="create-project.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
-<a href="create-project.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

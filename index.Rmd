@@ -4,15 +4,15 @@ author: "Ania Tassinari & Caitlin Guccione"
 date: "Summer 2019"
 geometry: margin=2cm
 site: bookdown::bookdown_site
-#output: bookdown::gitbook
+bookdown::pdf_document:
+    includes:
+      in_footer: footer.tex
 bookdown::gitbook:
   config:
     fontsettings:
       theme: Night
 documentclass: article
 classoption: openany
-bibliography: [book.bib, packages.bib]
-biblio-style: apalike
 link-citations: yes
 split_by: "chapter+number"
 always_allow_html: yes
@@ -26,7 +26,7 @@ It is ideal to do this setup in RStudio, but any platform of R will work:
 
 ```{r setUp, eval=FALSE }
 install.packages("workflowr")
-library("workflowr")
+library("workflowr") # Loads the workflowr package
 wflow_git_config(user.name = "First Last", user.email = "first.last@agios.com")
 ```
 
@@ -35,8 +35,8 @@ wflow_git_config(user.name = "First Last", user.email = "first.last@agios.com")
 ## R Prep
 
 ```{r createRProj, create, eval=FALSE }
-library("workflowr") #Don't have to repeat if completed above
-wflow_start("/path/PROJECT") #Starts a workflowr project by creating folders & R project
+library("workflowr") # Don't have to repeat if completed above
+wflow_start("/path/to/PROJECT") # Sets up the folder structure, RStudio project & a .git repo
 ```
 
 ## GitLab Repo Connection
@@ -44,27 +44,29 @@ wflow_start("/path/PROJECT") #Starts a workflowr project by creating folders & R
 Go to your Agios GitLab and do the following:
 
 + Create a project in GitLab with the same name as the project in RStudio
-+ Go to your PROJECT directory in your `terminal` and paste the `Push an Existing Git Repository`
++ Go to your PROJECT directory in your `terminal` & paste `Push an Existing Git Repository`
 
 ## Complete connection in R
 
 ```{r createGitProj, create, eval=FALSE }
-wflow_build() # Builds the Rmd files which builds the site allowing you to preview changes
-wflow_publish(c("analysis/*.Rmd"), "Publish the initial files for PROJECT") #Updates HTML files
-wflow_use_gitlab(username = "first.last", repository = "PROJECT", domain = "git.agios.local")
+wflow_build() # Builds Rmd files to HTML which creates the site allowing you to preview changes
+wflow_publish(files=c("analysis/*.Rmd"), message="Publish initial files") 
+# Builds Rmd files to HTML then, commits both Rmd & HTML files to GitLab with the above message
+# JavaScriptt/CSS files, which style the webpage are automatically commited as well
+$ git push # Pushes webpage to GitLab which saves a backup & allows others to view
+wflow_use_gitlab(username = "first.last", domain = "git.agios.local")
+# Creates a link on the home page of your website to your source code on GitLab
 ```
 
 # Creating a New File & Running Analysis
 
 ```{r newFile, eval=FALSE}
-wflow_open("analysis/NEW.Rmd") #Creates and opens a new file
-wflow_build() # If you are in RStudio you can also use the Knitr button here
-wflow_publish(c("analysis/NEW.Rmd"), "Publish the file NEW") #Updates HTML files
-```
-
-Make sure you are in the correct project in your `terminal`, then run:  
-```{r gitPush, eval=FALSE}
-git push #Pushes your work to Git saving a backup and allowing others to view your updated page
+wflow_open("analysis/NEW.Rmd") # Creates & opens a new file
+wflow_build() # Equivalent to RStudio's 'Knit' button
+wflow_publish(files=c("analysis/NEW.Rmd"), message ="Publish the file NEW") 
+$ git push # Pushes webpage to Git which saves a backup & allows others to view
 ```
 
 Repeat this process anytime you want to update your page. 
+
+$ Make sure you are in your `terminal` under the correct project before running the `git push` command
